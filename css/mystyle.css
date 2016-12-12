@@ -1,0 +1,70 @@
+body {
+    background-color: #4a5269;
+    color: #fdeaaf;
+}
+
+h1,h2{
+    font-family: 'Special Elite', cursive;
+}
+
+p{
+    font-family: 'Amatic SC', cursive;
+    font-size:2em;
+}
+
+.center{
+    text-align: center;
+}
+
+.second-heading{
+    color: #bfac76;
+    font-family: cursive;
+}
+
+.footer img{
+    height: 1.5em;
+    width:1.5em;
+}
+
+.navbar-default{
+    background-color: #4a5269;
+    border-color: #4a5269;
+}
+
+.navbar-default .navbar-brand{
+    color: #fdeaaf;
+    font-family: 'Special Elite', cursive;
+
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
+    color: #fdeaaf;
+    background-color: #373d50;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #fdeaaf;
+    font-family: 'Special Elite', cursive;
+
+}
+.navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus{
+    color: #fdeaaf;;
+    background-color: #373d50;
+    cursor: pointer;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #fdeaaf;
+    background-color: #373d50;
+    cursor: pointer;
+}
+.dl-horizontal > dd{
+    font-size:1.4em;
+    font-weight: bold;
+    font-family:'Amatic SC', cursive;
+
+}
+
+.dl-horizontal >dt{
+    font-size:1.75em;
+    font-family: 'Special Elite', cursive;
+}
