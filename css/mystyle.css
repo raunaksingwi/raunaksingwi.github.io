@@ -33,6 +33,7 @@ p{
 
 .navbar-default .navbar-brand{
     color: #fdeaaf;
+    font-size:1.5em;
     font-family: 'Special Elite', cursive;
 
 }
@@ -43,17 +44,20 @@ p{
 }
 .navbar-default .navbar-nav > li > a{
     color: #fdeaaf;
+    font-size:1.5em;
     font-family: 'Special Elite', cursive;
 
 }
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus{
-    color: #fdeaaf;;
+    color: #fdeaaf;
+    font-size:1.5em;
     background-color: #373d50;
     cursor: pointer;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
     color: #fdeaaf;
+    font-size:1.5em;
     background-color: #373d50;
     cursor: pointer;
 }
