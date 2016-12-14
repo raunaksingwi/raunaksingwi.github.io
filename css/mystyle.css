@@ -67,3 +67,11 @@ p{
     font-size:1.75em;
     font-family: 'Special Elite', cursive;
 }
+
+.mylink a{
+    color: #fdeaaf;
+}
+.mylink a:hover, .mylink a:focus{
+    color: #fdeaaf;
+    text-decoration: underline;
+}
