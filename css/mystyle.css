@@ -79,3 +79,7 @@ p{
     color: #fdeaaf;
     text-decoration: underline;
 }
+
+.mylink dd{
+    font-size:1.5em;
+}
