@@ -86,5 +86,5 @@ p{
 .achievements > li{
     font-size:2em;
     font-family:'Dekko', cursive;
-    list-style-type: none;
+    list-style-type: square;
 }
