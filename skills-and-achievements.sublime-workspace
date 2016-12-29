@@ -1,0 +1,504 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"forma",
+				"formattedRole"
+			],
+			[
+				"HTM",
+				"HTMLheaderName"
+			],
+			[
+				"f",
+				"formattedRole"
+			],
+			[
+				"for",
+				"formattedName"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"St",
+				"StatDemo"
+			],
+			[
+				"pr",
+				"println"
+			],
+			[
+				"v",
+				"void"
+			],
+			[
+				"o",
+				"ob2"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"s",
+				"strng_strt"
+			],
+			[
+				"st",
+				"strng_end"
+			],
+			[
+				"str",
+				"strng_strt"
+			],
+			[
+				"r",
+				"raw_input"
+			],
+			[
+				"en",
+				"str_end"
+			],
+			[
+				"c",
+				"count1"
+			],
+			[
+				"n",
+				"num"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"no",
+				"noOfMonths"
+			],
+			[
+				"d",
+				"day1"
+			],
+			[
+				"m",
+				"month1"
+			],
+			[
+				"y",
+				"year1"
+			],
+			[
+				"da",
+				"day2"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 252.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: lia",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package ",
+				"Package Control: Remove Package"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"them",
+				"Themr: Remove current theme from favorites"
+			],
+			[
+				"t",
+				"Themr: Add current theme to favorites"
+			],
+			[
+				"themr",
+				"Themr: List themes"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 188.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Nodejs/Nodejs.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/Raunak/Code/Random Code/demo.js",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/Nodejs.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/Terminal (OSX).sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/node.sublime-build",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/NodeJS.sublime-build",
+		"/Users/Raunak/Desktop/sublime.html",
+		"/Users/Raunak/Code/Java/Hello.java",
+		"/Users/Raunak/Code/Python/INTEST.py",
+		"/Users/Raunak/Code/Python/Sudoku.py",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Anaconda/README.md",
+		"/Users/Raunak/Code/Python/frustated.py",
+		"/Users/Raunak/Code/Python/anacondaIDE.py",
+		"/Users/Raunak/Code/raunaksingwi.github.io/journey-so-far.html",
+		"/Users/Raunak/Code/raunaksingwi.github.io/skills-and-achievements.html",
+		"/Users/Raunak/Code/raunaksingwi.github.io/.gitignore",
+		"/Users/Raunak/Code/C++/main.cpp",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Raunak/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Applications/Firefox Dev.app/Contents/Resources/defaults/pref/channel-prefs.js",
+		"/Users/Raunak/Code/Udacity Cource Material/JavaScript Udacity/js/resumeBuilder.js",
+		"/Users/Raunak/Code/Udacity Cource Material/JavaScript Udacity/js/helper.js",
+		"/Users/Raunak/Code/Udacity Cource Material/frontend-nanodegree-resume/js/helper.js",
+		"/Users/Raunak/Code/Udacity Cource Material/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/Users/Raunak/Downloads/raunaksingwi.github.io/css/mystyle.css",
+		"/Users/Raunak/Downloads/raunaksingwi.github.io/skills-and-achievements.html",
+		"/Users/Raunak/Downloads/raunaksingwi.github.io/journey-so-far.html",
+		"/Users/Raunak/Downloads/raunaksingwi.github.io/contact-me.html",
+		"/Users/Raunak/Downloads/raunaksingwi.github.io/index.html",
+		"/Users/Raunak/Code/Portfolio/stylesheet.css",
+		"/Users/Raunak/Code/Portfolio/index.html",
+		"/Users/Raunak/Downloads/bootstrap/bootstrap-prestructure.htm",
+		"/Users/Raunak/Downloads/asteroids/game.js",
+		"/Users/Raunak/code/Python/Sudoku.py",
+		"/Users/Raunak/code/Portfolio/index.html",
+		"/Users/Raunak/code/Java/Main.java",
+		"/Users/Raunak/code/Python/starPyramid.py",
+		"/Users/Raunak/Documents/Theory of Computation/imsmanifest.xml",
+		"/Users/Raunak/code/Python/test.py",
+		"/Users/Raunak/code/Python/Arr2D.py",
+		"/Users/Raunak/code/Java/StackQueue.java",
+		"/Users/Raunak/code/Java/Testing.java",
+		"/Users/Raunak/code/Java/Solution2.java",
+		"/Users/Raunak/code/Python/sublime.py",
+		"/Users/Raunak/code/Java/sol.java",
+		"/Users/Raunak/code/hello.c",
+		"/Users/Raunak/code/Java/FinallyBlock.java",
+		"/Users/Raunak/CODE/Java/Test.java",
+		"/Users/Raunak/Coder/Portfolio/index.html",
+		"/Users/Raunak/Coder/demo.html",
+		"/Users/Raunak/Coder/Portfolio/stylesheet.css",
+		"/Users/Raunak/Coder/Java Testing/Smallimport.java",
+		"/Users/Raunak/Coder/Java Testing/Bigimport.java",
+		"/Users/Raunak/Coder/Java Testing/app.java",
+		"/Users/Raunak/Coder/Java Testing/applet.html",
+		"/Users/Raunak/Coder/applet.html",
+		"/Users/Raunak/Coder/app.java",
+		"/Users/Raunak/Desktop/Test.java",
+		"/Users/Raunak/Desktop/evenodd.py",
+		"/Users/Raunak/Coder/C code/try.c",
+		"/Users/Raunak/Desktop/test/index.html",
+		"/Users/Raunak/Desktop/test/App.java",
+		"/Users/Raunak/Desktop/Applet/index.html",
+		"/Users/Raunak/Desktop/Applet/app.java",
+		"/Users/Raunak/Coder/Eclipse Java/Book Examples/bin/untitled.html",
+		"/Users/Raunak/Coder/Eclipse Java/Book Examples/bin/Applet.html",
+		"/Users/Raunak/Coder/raunaksingwi.github.io/index.html",
+		"/Users/Raunak/Desktop/java/ShowFile.java",
+		"/Users/Raunak/Coder/raunaksingwi.github.io/stylesheet.css",
+		"/Users/Raunak/Coder/MyWebsite/style.css",
+		"/Users/Raunak/Coder/MyWebsite/index.html",
+		"/Users/Raunak/Desktop/java/Demo.java",
+		"/Users/Raunak/Desktop/Demo.java",
+		"/Users/Raunak/Desktop/demo.java",
+		"/Users/Raunak/Desktop/test.java",
+		"/Users/Raunak/Desktop/example.java",
+		"/Users/Raunak/Downloads/source_energylabs.in.html",
+		"/Users/Raunak/Coder/Eclipse Java/Learn Packages.java",
+		"/Users/Raunak/Coder/Demo Webpage/index.html",
+		"/Users/Raunak/Coder/Python/LEXOPAL2.py",
+		"/Users/Raunak/Coder/Python/LEXOPAL.py",
+		"/Users/Raunak/Coder/Python/test.py",
+		"/Users/Raunak/Coder/Python/LONGSEQ.py",
+		"/Users/Raunak/Coder/Demo Webpage/stylesheets/style1.css",
+		"/Users/Raunak/Coder/Python/removeSpaceString.py",
+		"/Users/Raunak/Downloads/sol2.py",
+		"/Users/Raunak/Coder/Python/Dukan.py",
+		"/Users/Raunak/Coder/Python Code/Dukan.py",
+		"/Users/Raunak/Coder/Python Code/Test.py",
+		"/Users/Raunak/Coder/Python Code/DaysBetnDate.py"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"HTMLpageHeader",
+			"../",
+			"first",
+			"widows",
+			"3em",
+			"meth",
+			"A",
+			"function",
+			"return",
+			"print"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 75.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 154.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.nodejs":
+	{
+		"height": 210.0
+	},
+	"pinned_build_system": "",
+	"project": "skills-and-achievements.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 179.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
