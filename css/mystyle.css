@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(52, 46, 42);
+    background-color: #4a5269;
     color: #fdeaaf;
 }
 
@@ -32,8 +32,8 @@ p{
 }
 
 .navbar-default{
-    background-color: rgb(52, 46, 42);
-    border-color: rgb(52, 46, 42);
+    background-color: #4a5269;
+    border-color: #4a5269;
 }
 
 .navbar-default .navbar-brand{
@@ -44,7 +44,7 @@ p{
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
     color: #fdeaaf;
-    background-color: rgb(88, 76, 67);
+    background-color: #373d50;
     cursor: pointer;
 }
 .navbar-default .navbar-nav > li > a{
@@ -56,14 +56,14 @@ p{
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus{
     color: #fdeaaf;
     font-size:1.5em;
-    background-color: rgb(88, 76, 67);
+    background-color: #373d50;
     cursor: pointer;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
     color: #fdeaaf;
     font-size:1.5em;
-    background-color: rgb(88, 76, 67);
+    background-color: #373d50;
     cursor: pointer;
 }
 .dl-horizontal > dd{
