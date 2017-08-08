@@ -4,11 +4,11 @@ body {
 }
 
 h1,h2{
-    font-family: 'Acme', cursive;
+    font-family: 'Montserrat Subrayada', cursive;
 }
 
 p{
-    font-family: 'The Girl Next Door', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size:2em;
 }
 
@@ -22,7 +22,7 @@ p{
 }
 
 .footer{
-    font-family: 'Acme';
+    font-family: 'Montserrat Subrayada';
     font-size: 1.25em;
     padding-top: 0.5em;
 }
@@ -39,7 +39,7 @@ p{
 .navbar-default .navbar-brand{
     color: #fdeaaf;
     font-size:1.5em;
-    font-family: 'Acme', cursive;
+    font-family: 'Montserrat Subrayada', cursive;
 
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{
@@ -50,7 +50,7 @@ p{
 .navbar-default .navbar-nav > li > a{
     color: #fdeaaf;
     font-size:1.5em;
-    font-family: 'Acme', cursive;
+    font-family: 'Montserrat Subrayada', cursive;
 
 }
 .navbar-default .navbar-nav > .active > a,.navbar-default .navbar-nav > .active > a:hover,.navbar-default .navbar-nav > .active > a:focus{
@@ -69,12 +69,12 @@ p{
 .dl-horizontal > dd{
     font-size:1.4em;
     font-weight: bold;
-    font-family: 'The Girl Next Door', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 
 .dl-horizontal >dt{
     font-size:1.75em;
-    font-family: 'Acme', cursive;
+    font-family: 'Montserrat Subrayada', cursive;
 }
 
 .mylink a{
@@ -90,6 +90,6 @@ p{
 }
 .achievements > li{
     font-size:2em;
-    font-family:'The Girl Next Door', sans-serif;
+    font-family:'Cuprum', sans-serif;
     list-style-type: square;
 }
