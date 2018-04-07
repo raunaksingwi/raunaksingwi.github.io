@@ -72,7 +72,7 @@
 	<div class="container">
 		<!-- PROFILE -->
 		<div class="row">
-			<div class="col-xs-11 col-md-4 col-lg-3 title">
+			<div class="col-xs-11 col-md-4 col-lg-3 title" id="about_me">
 				<h2><span class="glyphicon glyphicon-pencil"></span> ABOUT ME</h2>
 			</div>
 		</div>
@@ -400,7 +400,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$("#dp").addClass("animated infinite pulse");
+			$("#dp").addClass("animated tada");
+			$(".logo").addClass("animated tada")
+			$('#about_me').addClass("animated tada")
 		});
 	</script>
 </body>
