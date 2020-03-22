@@ -6,48 +6,34 @@
 	<meta name="description" content="Raunak Singwi's portfolio.">
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1, user-scalable=no"">
 	<title>Raunak Singwi</title>
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.png'>
 
 	<!--bootstrap-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+	<!--NES.css minify-->
+	<link href="css/nes.min.css" rel="stylesheet" />
 	<!--fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-	<!--Animate.css-->
-	<!--<link rel="stylesheet" href="css/animate.min.css" type="text/css">-->
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
 	<style>
 		
-		body{
-			color: #444;
-			font-family: roboto,san-serif;
+		html, body, pre, code, kbd, samp{
+			background-color: #444;
+			color: white;
+			font-family: Press+Start+2P,san-serif;
 		}
 
 		p{
-			font-size: 2em;
+			font-size: 1em;
 		}
 
 		li{
-			font-size: 2em;
-		}
-
-		h4{
-			color: #5CDB95
+			font-size: 1em;
 		}
 
 		.title{
-			font-family: 'Lato', sans-serif;
-			background-color: #379683;
-			color: white;
-			border: 1px solid;
+			font-size: 1.5em;
 			padding: 10px;
-			box-shadow: 3px 6px #317f6e;
-			border-radius: 25px;
-		}
-
-		.subtitle{
-			font-family: 'Lato', sans-serif;
-			color: #379683;
 		}
 
 		.skills{
@@ -58,12 +44,8 @@
 			font-size: 1em
 		}
 
-		.logo img{
-			margin: 1em;
-		}
-
 		#dp{
-			border-radius: 25px;
+			border-radius: 50px;
 		}
 	</style>
 </head>
@@ -72,175 +54,173 @@
 	<div class="container">
 		<!-- PROFILE -->
 		<div class="row">
-			<div class="col-xs-11 col-md-4 col-lg-3 title" id="about_me">
-				<h2><span class="glyphicon glyphicon-pencil"></span> ABOUT ME</h2>
+			<div class="col-xs-12 col-md-4 col-lg-3" id="about_me">
+				<button type="button" class="nes-btn is-primary title">
+					ABOUT ME
+				</button>
+			</div>
+
+			<div class="col-xs-12 col-md-8 col-lg-9">
+				<a href="http://www.github.com/raunaksingwi" target="_blank"><i class="nes-icon github is-medium"></i></a>
+				
+				<a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank"><i class="nes-icon linkedin is-medium"></i></a>
+				
+				<a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw?view_as=subscriber" target="_blank"><i class="nes-icon youtube is-medium"></i></a>
+				
+				<a href="https://twitter.com/raunak_singwi" target="_blank"><i class="nes-icon twitter is-medium"></i></a>
+				
+				<a href="https://www.instagram.com/raunaksingwi/" target="_blank"><i class="nes-icon instagram is-medium"></i></a>
+				
+				<a href="mailto:raunaksingwi7@gmail.com" target="_blank"><i class="nes-icon gmail is-medium"></i></a>
 			</div>
 		</div>
 		<br><br>
 
 		<div class="row">
-
 			<!-- IMAGE -->
 			<div class="col-xs-12 col-md-4">
-				<img src="pics/profile_pic.jpg" alt="Raunak" class="img-responsive" id="dp">
+				<img src="pics/profile_pic.jpeg" alt="Raunak" class="img-responsive" id="dp">
 				<br><br>
 			</div>
 
 			<!-- DESIGNATION -->
-			<div class="col-xs-12 col-md-4" id="name_tag">
+			<div class="col-xs-12 col-md-8" id="name_tag">
 				<h1>Raunak Singwi</h1>
-				<h4>Member of Technical Staff @ <b>VM</b>ware R&D, Bangalore.</h4>
+				<h4 class="nes-text is-success">Member of Technical Staff 2 @VMware R&D, Pune.</h4>
 				<br><br>
 			</div>
 			
-			<div class="col-xs-12 col-md-4">
-				<!-- BIO -->
-				<table class="bio">
-					<tr>
-						<th>Name:</th>
-						<td>Raunak Ravindra Singwi</td>
-					</tr>
-					<tr>
-						<th>Date of Birth:</th>
-						<td>December 25th, 1996</td>
-					</tr>
-					<tr>
-						<th>Phone:</th>
-						<td>+91 82084 56990</td>
-					</tr>
-					<tr>
-						<th>Email:</th>
-						<td>raunaksingwi7@gmail.com</td>
-					</tr>
-				</table>
-
-				<div class="row">
-					<div class="col-xs-12 logo">
-
-						<a href="http://www.github.com/raunaksingwi" target="_blank">
-							<img src="pics/github.png" alt="GitHub Logo" style="height: 3em;">
-						</a>
-
-						<a href="http://www.hackerrank.com/raunaksingwi" target="_blank">
-							<img src="pics/hackerrank.png" alt="HackerRank Logo" style="height: 3em;">
-						</a>
-
-						<a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank">
-							<img src="pics/linkedin.png" alt="Linkedin Logo" style="height: 3.5em;"">
-						</a>
-
-						<a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw?view_as=subscriber" target="_blank">
-							<img src="pics/youtube.png" alt="YouTube Logo" style="height: 2.5em;">
-						</a>
-					</div>
-				</div>
-			</div>
 		</div>
 		<br><br>
 
 		<!-- ABOUT ME -->
 		<div class="row">
 			<div class="col-xs-12">
-				<p>'Moodie and Foodie' defines me the best. Apart from eating, I love to code. Just the feeling to write some code and then see something happen on the computer is incredibly pleasing. But if coding is my bread and butter, listening and reciting poetry is my dessert. I also love skateboarding and swimming. </p>
+				<p>I have always been interested in computers, ever since I was a kid. Today, I am very passionate software engineer. I am also extremely passionate about poetry. I keep reading, listning and reciting poems. I also do skateboarding and biking for fun.</p>
 			</div>
 		</div>
 		<br><br><br>
 
-		<!-- JOURNEY SO FAR -->
-		<div class="row">
-			<div class="col-xs-11 col-md-5 col-lg-4 title">
-				<h2><span class="glyphicon glyphicon-flag"></span> JOURNEY SO FAR</h2>
-			</div>
-		</div>
-		<br><br>
-
 		<!-- WORK EXPERIENCE -->
 		<div class="row">
-			<div class="col-xs-12 subtitle">
-			<h2><span class="glyphicon glyphicon-briefcase"></span> WORK EXPERIENCE</h2>
+			<div class="col-xs-12">
+				<button type="button" class="nes-btn is-primary title">
+					WORK EXPERIENCE
+				</button>
 			</div>
 		</div>
 		<br><br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Member of Technical Staff I</h1>
-	        	<h4>VMware, Bangalore</h4>
+				<h3>Member of Technical Staff 2</h1>
+				<h4 class="nes-text is-success">VMware</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
-				<p>Working on the development of next version of vCenter External to Embedded Convergence tool</p>
+				<p>
+					Working on WCP service lifecycle development.<br>
+					Developed the stage and install operations for NSX appliance integrated with vCenter Server as part of Project
+Pacific.
+				</p>
+			</div>
+		</div>
+		<br><br>
+		
+		<div class="row">
+			<div class="col-xs-12 col-md-3">
+				<h3>Member of Technical Staff 1</h1>
+				<h4 class="nes-text is-success">VMware</h4>
+				<br>
+			</div>
+			<div class="col-xs-12 col-md-9">
+				<p>
+					Developed v2.0 of vCenter External to Embedded Converge Tool that included vSphere API development for the tool.
+				</p>
 			</div>
 		</div>
 		<br><br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>R&D Intern</h1>
-	        	<h4>VMware, Bangalore</h4>
+				<h3>R&D Intern</h1>
+				<h4 class="nes-text is-success">VMware</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
-				<p>Developed the vCenter External to Embedded Convergence tool that converges a vCenter Server having an external PSC (Platform Services Controller) deployment model to an embedded PSC deployment model at runtime.</p>
+				<p>
+					Developed the vCenter External to Embedded Converge Tool that converts an external PSC (Platform Services Controller) to an embedded PSC at runtime.
+				</p>
 			</div>
 		</div>
 		<br><br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Project Intern</h1>
-	        	<h4>Persistent Systems, Nagpur</h4>
+				<h3>Intern</h1>
+				<h4 class="nes-text is-success">Persistent Systems, Nagpur</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
-				<p>Built a web based chatbot to answer FAQs about colleges in Nagpur such as placements and admission related questions. Scraped the websites of these colleges to populate the database.</p>
+				<p>
+					Built a small web application using Django (Python).
+				</p>
 			</div>
 		</div>
 		<br><br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Summer Intern</h1>
-	        	<h4>Anand Engineering and Consultancy Services</h4>
+				<h3>Summer Intern</h1>
+				<h4 class="nes-text is-success">Anand Engineering and Consultancy Services, Nagpur</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
-				<p>Interned under the Government of India’s RGSTC-TIFAC-MSME internship program. Built a real-time monitoring system for mining machines to reduce the downtime.
-</p>
+				<p>
+					Interned under the Government of India’s RGSTC-TIFAC-MSME internship program. Built a real-time monitoring system for mining machines to reduce downtime.
+				</p>
 			</div>
 		</div>
 		<br><br><br>
 
 		<!-- EDUCATION -->
-
 		<div class="row">
-			<div class="col-xs-12 subtitle">
-				<h2><span class="glyphicon glyphicon-education"></span> EDUCATION</h2>
-				<br>
-				<br>
+			<div class="col-xs-12">
+				<button type="button" class="nes-btn is-primary title">
+					EDUCATION
+				</button>
 			</div>
 		</div>
-
+		<br>
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Bachelor of Engineerng in Information Techonlogy</h1>
-	        	<h4>Ramdeobaba College of Engineering, Nagpur</h4>
+				<h3>Bachelor of Engineerng in Information Techonlogy</h1>
+				<h4 class="nes-text is-success">Ramdeobaba College of Engineering, Nagpur</h4>
+				<br>
 			</div>
-			<div class="col-xs-12 col-md-9">
+			<div class="col-xs-12  col-md-9">
 				<p>This was in real terms the turning point of my life. I came in as an academically average student, but full of enthusiasm and aspirations. I was interested in computers since childhood and wanted to master it. In college I got to learn a lot. I learned to code and many more aspects of computer science. The best part was undoubtedly the hostel life. I had great life experiences, met nice people, made awesome friends, I got to explore myself, participated in lots of extra curricular activities and had great fun. I came out as a confident, independent and skilled person.</p>
 			</div>
 		</div>
+		<br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Engineering entrance coaching</h1>
-	        	<h4>Padhye Sir's Akash Education, Akola</h4>
+				<h3>JEE coaching</h1>
+				<h4 class="nes-text is-success">Padhye Sir's Akash Education, Akola</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
 				<p>Living far from parents for the first time in life, studying with a bunch of very intelligent students, the real competition for success begun here. The competition to clear the entrance and get into a prestigious engineering college. I fall behind the race, I didn't study, I wasted the precious time, but learnt a lesson. This time tought me the importance of hard work.</p>
 			</div>
 		</div>
+		<br>
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h1>Schooling</h1>
-            	<h4>Dinbai High School, Digras</h4>
+				<h3>School</h1>
+				<h4 class="nes-text is-success">Dinbai High School, Digras</h4>
+				<br>
 			</div>
 			<div class="col-xs-12 col-md-9">
 				<p>Living with family, not having any responsibility, fully enjoying childhood, school is just unforgetable. </p>
@@ -248,97 +228,108 @@
 		</div>
 		<br><br>
 
-		<!-- SKILLS AND ACHIEVEMENTS -->
+		<!-- SKILLS -->
 		<div class="row">
-			<div class="col-xs-11 col-md-6 col-lg-5 title">
-				<h2><span class="glyphicon glyphicon-star"></span> SKILLS & ACHIEVEMENTS</h2>
+			<div class="col-xs-12">
+				<button type="button" class="nes-btn is-primary title">
+					SKILLS
+				</button>
 			</div>
 		</div>
-		<br><br>
-
-		<!-- TECHNICAL SKILLS -->
-		<div class="row">
-			<div class="col-xs-12 subtitle">
-				<h2><span class="glyphicon glyphicon-wrench"></span> TECHNICAL SKILLS</h2>
-				<br><br>
-			</div>
-			<div class="col-xs-12">
-				<ul class="list-unstyled">
-					<li><span class="glyphicon glyphicon-menu-right"></span> Python, Java, C, SQL.</li>
-					<li><span class="glyphicon glyphicon-menu-right"></span> HTML, CSS, Bootstrap, jQuery, Django.</li>
-					<li><span class="glyphicon glyphicon-menu-right"></span> Git, Perforce, Linux, Virtualization, PostgresDB.</li>
-					<li><span class="glyphicon glyphicon-menu-right"></span> vSphere.</li>
+		<br>
+		<div class=row>
+			<div class="col-xs-12 lists">
+				<ul class="nes-list is-circle">
+					<li> Python, Go, Java, C, SQL.</li>
+					<li> HTML, CSS, Bootstrap, jQuery, Django.</li>
+					<li> Git, Perforce, Linux.</li>
 				</ul>
 			</div>
 		</div>
-		<br>
-
-		<!-- INTERPERSONAL SKILLS -->
-		<div class="row">
-
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<p style="font-weight: bold;">PUBLIC SPEAKING</p>
-			</div>
-			<div class="col-xs-12 col-md-9">
-				<p>I am very confident in delivering speech in front of mass audience. I have won various awards in speech and debate competitions.</p>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<p style="font-weight: bold;">TEAM PLAYER</p>
-			</div>
-			<div class="col-xs-12 col-md-9">
-				<p>I enjoy working with people as a team. I realized this by playing various sports and also organizing some co-curricular events.</p>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<p style="font-weight: bold;">LEADERSHIP</p>
-			</div>
-			<div class="col-xs-12 col-md-9">
-				<p>I believe that I have leadership qualities. I have found myself many time leading the team in the right direction with a solution centric approach.</p>
-			</div>
-		</div>	
 		<br><br>
 
-		<!-- PUBLIC SPEAKING ACHIEVEMENTS -->
-		<div class="row">
-			<div class="col-xs-12 col-md-7 subtitle">
-				<h2><span class="glyphicon glyphicon-bullhorn"></span> PUBLIC SPEAKING ACHIEVEMENTS</h2>
-				<br><br>
-			</div>
-		</div>
-		<br><br>
-
-		<!-- ACHIEVEMENT LIST -->
+		<!-- TECHNICAL ACHIEVEMENTS -->
 		<div class="row">
 			<div class="col-xs-12">
-				<ul class="list-unstyled">
-						<li><span class="glyphicon glyphicon-pushpin"></span> 2nd Rank, National Level Debate Competition at Jamia Millia Islamia University, New Delhi. February 17th, 2016.</li>
+				<button type="button" class="nes-btn is-primary title">
+					TECHNICAL ACHIEVEMENTS
+				</button>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12 lists">
+				<ul class="nes-list">
+					<li>Grand Winner along with the Org-Diversity and Geo-Diversity 1st prizes in VMware’s Global Hackathon out of
+						171 participant teams and more than 1000 hackers, Q2 2019 with a team of 8 engineers across 6 business units, 5 geographies and 4 time-zones. Invited at the Palo Alto HQ to present the demo to all the executives and technical leaders.<br>
+						<span class="nes-text is-error">Title: VMware Immune Cloud.</span> <br><br>
+					</li>
+					<li>
+						Finalist (top 5) in VMware’s Global Hackathon out of 22 participant teams, Q1 2019 with a team of 5 engineers across 3 locations, 3 business units and 2 time-zones.<br>
+						<span class="nes-text is-error">Title: Secure ESXi (hypervisor) hosts with AppDefence.</span><br><br>
+					</li>
+					<li>
+						Finalist (top 5) in VMware’s Global Hackathon out of 32 participant teams, Q4 2018 with a team of 5 engineers across 4 locations, 3 business units and 3 time-zones.<br>
+						Accepted at VMware RADIO (Research and Development Innovation Offsite), 2019 for Expo.<br>
+						<span class="nes-text is-error">Title: Remote IoT Edge device management with poor internet connection.</span><br><br>
+					</li>
+				</ul>
+			</div>
+		</div>			
+		<br><br>
+
+		<!-- PATENT(S) -->
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="button" class="nes-btn is-primary title">
+					PATENT(S)
+				</button>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12 lists">
+				<ul class="nes-list is-circle">
+					<li>System and method for embedding infrastructure security services into management nodes. (Filed in US PTO)</li>
+				</ul>
+			</div>
+		</div>			
+		<br><br>
+
+		<!-- PUBLIC SPEAKING AWARDS -->
+		<div class="row">
+			<div class="col-xs-12">
+				<button type="button" class="nes-btn is-primary title">
+					PUBLIC SPEAKING AWARDS
+				</button>
+			</div>
+		</div>
+		<br>
+		<!-- ACHIEVEMENT LIST -->
+		<div class="row">
+			<div class="col-xs-12 lists">
+				<ul class="nes-list is-circle">
+						<li> 2nd Rank, National Level Debate Competition at Jamia Millia Islamia University, New Delhi. February 17th, 2016.</li>
 		                <br>
-						<li><span class="glyphicon glyphicon-pushpin"></span> 1st Rank, Inter-Collegiate Debate Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
+						<li> 1st Rank, Inter-Collegiate Debate Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 1st Rank, Inter-Collegiate Extempore Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
+		                <li> 1st Rank, Inter-Collegiate Extempore Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
 						<br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span>Best Speaker, Impromptu Speech a.k.a Table Topics at IBC Titans Toastmasters Club, Oracle Corporation, Bangalore. February 14th, 2019</li>
+		                <li>Best Speaker, Impromptu Speech a.k.a Table Topics at IBC Titans Toastmasters Club, Oracle Corporation, Bangalore. February 14th, 2019</li>
 						<br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span>3rd Rank, Impromptu Speech a.k.a Table Topics at Toastmasters Zonal Level Contest organized at IIM, Bangalore. February 16th, 2019</li>
+		                <li>3rd Rank, Impromptu Speech a.k.a Table Topics at Toastmasters Zonal Level Contest organized at IIM, Bangalore. February 16th, 2019</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 3rd Rank, Vidharbha Level Elocution Competition organized at 'C.P. and Berar college' in association with Late. Savarkar Memorial Committee, Nagpur. March, 2017</li>
+		                <li> 3rd Rank, Vidharbha Level Elocution Competition organized at 'C.P. and Berar college' in association with Late. Savarkar Memorial Committee, Nagpur. March, 2017</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 1st Rank, Orator Of The Year, organized by NSS unit,Ramdeobaba College of Engineering and Management, Nagpur. 2015</li>
+		                <li> 1st Rank, Orator Of The Year, organized by NSS unit,Ramdeobaba College of Engineering and Management, Nagpur. 2015</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 1st Rank(Team of 5), Youth Parliament, organized by SRC,Ramdeobaba College of Engineering and Management, Nagpur. 2016</li>
+		                <li> 1st Rank(Team of 5), Youth Parliament, organized by Ramdeobaba College of Engineering and Management, Nagpur. 2016</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 3rd Rank, Inter-College Debate & Extempore (combined) Competition organized by Government Institute of Forensic Sciences, Nagpur. January 31st, 2017</li>
+		                <li> 3rd Rank, Inter-College Debate & Extempore (combined) Competition organized by Government Institute of Forensic Sciences, Nagpur. January 31st, 2017</li>
 		                <br>
-		                 <li><span class="glyphicon glyphicon-pushpin"></span> 3rd Rank, University Level Inter-Collegiate Debate Competition, organized by Dr. M.K. Umathe Arts, Science & Shri R.Mokhare Commerse College, Nagpur. January 17th, 2017</li>
+		                 <li> 3rd Rank, University Level Inter-Collegiate Debate Competition, organized by Dr. M.K. Umathe Arts, Science & Shri R.Mokhare Commerse College, Nagpur. January 17th, 2017</li>
 		                <br>
-		                <li><span class="glyphicon glyphicon-pushpin"></span> 3rd Rank, Intra-College debate competition, organized by Power Grid Corporation in association with Ramdeobaba College of Engineering and Management, Nagpur. October 25th, 2016</li>
+		                <li> 3rd Rank, Intra-College debate competition, organized by Power Grid Corporation in association with Ramdeobaba College of Engineering and Management, Nagpur. October 25th, 2016</li>
 		                <br>
 				</ul>
 			</div>
@@ -348,14 +339,9 @@
 		<!-- FOOTER -->
 		<div class="row">
 			<div class="col-xs-12 text-center">
-				<p class="text-muted" style="font-size: 1.25em">Made with <img src="pics/heartbeat.gif" alt="love" style="height: 2em"> by Raunak Singwi</p>
+				<p class="text-muted" style="font-size: 0.75em">Made with <i class="nes-icon is-small heart"></i> by Raunak Singwi</p>
 			</div>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		$(document).ready(function(){
-		});
-	</script>
 </body>
 </html>
