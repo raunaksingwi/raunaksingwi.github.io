@@ -10,8 +10,10 @@
 
 	<!--bootstrap-->
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+
 	<!--NES.css minify-->
 	<link href="css/nes.min.css" rel="stylesheet" />
+
 	<!--fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
@@ -20,7 +22,7 @@
 		html, body, pre, code, kbd, samp{
 			background-color: #444;
 			color: white;
-			font-family: Press+Start+2P,san-serif;
+			font-family: Press+Start+2P, san-serif;
 		}
 
 		p{
@@ -79,7 +81,7 @@
 		<div class="row">
 			<!-- IMAGE -->
 			<div class="col-xs-12 col-md-4">
-				<img src="pics/profile_pic.jpeg" alt="Raunak" class="img-responsive" id="dp">
+				<img src="pics/profile_pic.jpg" alt="Raunak" class="img-responsive" id="dp">
 				<br><br>
 			</div>
 
@@ -97,15 +99,15 @@
 						<br>
 						<p>Key Achievements:</p>
 						<ul class="nes-list">
+							<li> 9 US Patents (1 granted; 8 pending)</li>
+							<br>
 							<li> 2 x Winner of VMware Global Hackathon.</li>
 							<br>
-							<li> 4 x Accepted at VMware Research & Development Innovation Offsite which has an acceptance rate of ~10%.</li>
+							<li> 4 x Accepted at VMware Research & Development Innovation Offsite which has an acceptance rate of ~10% (2021, 2020, 2019, 2018).</li>
 							<br>
 							<li> 2 x Runner up at VMware Site Level Hackathon.</li>
 							<br>
 							<li> Accepted at VMware xLabs program, VMware's internal incubator that fast-tracks and nurtures innovative off-roadmap ideas.</li>
-							<br>
-							<li> 9 US Patents (1 granted; 8 pending)</li>
 							<br>
 						</ul>
 					</div>
@@ -138,8 +140,7 @@
 			</div>
 			<div class="col-xs-12 col-md-9 lists">
 			<ul class="nes-list">
-					<li>Member of the Kaiju team within monitoring cloud</li>
-					<br>
+					<li>Working on the development of a monitoring platform for running synthetic emulations of services to monitor availability and correctness. [Java]</li>
 			</ul>
 			</div>
 		</div>
@@ -148,13 +149,14 @@
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
 				<h3>Member of Technical Staff 3</h1>
-				<h4 class="nes-text is-success">Advanced Technology Group, Office of the CTO, VMware</h4>
+				<h4 class="nes-text is-success">VMware</h4>
 				<br>
 			</div>
 			<div class="col-xs-12 col-md-9 lists">
 			<ul class="nes-list">
-					<li> Developed a Kubernetes on Edge solution integrated with VMware SD-WAN to run workloads utilizing spare compute capacity on edge routers. <a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/">Project Santa Cruz</a> <a href="https://www.youtube.com/watch?v=deMUBez9Nrc">VMworld Demo</a></li>
+					<li>Designed and developed a Kubernetes-on-Router solution that leverages spare resources on a VMware SD-WAN managed router to securely deploy and manage containerised applicatons on the edge. [Python, Go, Bash, Kubernetes]</li>
 					<br>
+					<li> This is a new integrated offering by VMware that adds edge compute and SD-WAN together to give you a secure, scalable, zero-touch edge runtime at all of your edge locations at scale. <a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/">Project Santa Cruz</a> <a href="https://www.youtube.com/watch?v=deMUBez9Nrc">VMworld Demo</a></li>
 			</ul>
 			</div>
 		</div>
@@ -162,18 +164,50 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-md-3">
-				<h3>From Intern to Member of Technical Staff 2</h1>
-				<h4 class="nes-text is-success">vCenter Platform & NSX Platform, VMware</h4>
+				<h3>Member of Technical Staff 2</h1>
+				<h4 class="nes-text is-success">VMware</h4>
 				<br>
 			</div>
 			<div class="col-xs-12 col-md-9 lists">
 			<ul class="nes-list">
-				<li> Developed the stage and install operations for NSX appliance embedded within vCenter Server as part of <a href="https://blogs.vmware.com/vsphere/2019/08/introducing-project-pacific.html">Project Pacific</a>.</li>
+				<li> Migrated a metrics collection platform from an acquired company and integrated with VMware's product.</li>
 				<br>
-				<li> Worked on the development (migration of acquired product) of a metrics collection platform for NSX.</li>
+				<li> Converted the monolith pla3orm to micro-services. [Java, C++, Python, gRPC, GraphQL, Docker, Kubernetes, Helm]</li>
+			</ul>
+			</div>
+		</div>
+		<br><br>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-3">
+				<h3>Member of Technical Staff 1</h1>
+				<h4 class="nes-text is-success">VMware</h4>
 				<br>
-				<li> Developed the vCenter External to Embedded Converge Tool (<a href="https://blogs.vmware.com/vsphere/2019/02/understanding-the-vcenter-server-converge-tool.html">1.0</a>, <a href="https://blogs.vmware.com/vsphere/2019/04/vcenter-server-converge-tool-enhancements-in-vsphere-6-7-update-2.html">2.0</a>) which embeds the vCenter SSO appliance (aka PSC) in the vCenter Server management appliance.</li>
+			</div>
+			<div class="col-xs-12 col-md-9 lists">
+			<ul class="nes-list">
+				<li> Developed the stage and install features for installing a 1st party appliance (VMware NSX) on VMware vCenter Server.</li>
 				<br>
+				<li> Wrote APIs for authenScaSon, staging and installaSon.</li>
+				<br>
+				<li> Made the deployment process single click by intelligently determining the installation parameters for the 1st party appliance accessing the runtime state of vCenter server.</li>
+				<br>
+				<li> Maintained more than 75% code coverage through unit-testing [Go]</li>
+			</ul>
+			</div>
+		</div>
+		<br><br>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-3">
+				<h3>R&D Intern</h1>
+				<h4 class="nes-text is-success">VMware</h4>
+				<br>
+			</div>
+			<div class="col-xs-12 col-md-9 lists">
+			<ul class="nes-list">
+				<li> Developed a feature/tool that changes the deployment topology of vCenter Server at runtime from having an external SSO appliance (VM) to an embedded SSO. [Python, vSphere SDK]
+				</li>
 			</ul>
 			</div>
 		</div>
