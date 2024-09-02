@@ -15,72 +15,114 @@
     <link href="css/nes.min.css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323:400,700" rel="stylesheet">
 
     <style>
-        html, body, pre, code, kbd, samp {
-            background-color: #444;
+        html, body {
+            background-color: #2c3e50;
             color: white;
             font-family: 'Press Start 2P', sans-serif;
-            line-height: 1.6; /* Increase line spacing */
+            line-height: 1.6;
+            height: 100%;
+            margin: 0;
         }
 
-        p, li {
-            font-size: 1em;
-            margin-bottom: 1em; /* Add space between paragraphs and list items */
+        .container {
+            padding-top: 50px;
+            min-height: calc(100vh - 100px); /* Adjusted to account for footer height and margin */
+            box-sizing: border-box;
         }
 
         .title {
-            font-size: 1.5em;
-            padding: 10px;
+            font-size: 2em; /* Increased font size for titles */
+            padding: 20px; /* Increased padding */
+            margin-bottom: 20px;
+            font-family: 'VT323', monospace; /* Use VT323 for titles */
+            font-weight: 700; /* Bold weight for titles */
         }
 
-        .skills {
-            font-size: 2em;
+        .nes-btn {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 15px 30px; /* Increased padding for buttons */
+            transition: background-color 0.3s;
         }
 
-        .bio {
-            font-size: 1em;
+        .nes-btn:hover {
+            background-color: #3498db;
         }
 
-        #dp {
-            border-radius: 200px;
+        .lists ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .lists li {
+            margin-bottom: 20px; /* Increased margin for more spacing */
+            position: relative;
+            padding-left: 30px; /* Space for bullet icon */
+        }
+
+        .lists li::before {
+            content: '•'; /* Bullet icon */
+            position: absolute;
+            left: 0;
+            color: #3498db; /* Bullet color */
+            font-size: 1.5em; /* Bullet size */
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 0; /* Reduced padding for narrower footer */
+            background-color: #1a252f; /* Changed to a distinct color */
+            margin-top: 20px; /* Added margin for spacing */
         }
 
         .social-icons a {
             margin: 0 5px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
         }
 
         .social-icons i {
-            font-size: 24px; /* Set the size of the icons */
+            font-size: 24px;
         }
 
-        html, body {
-            height: 100%; /* Ensure the body takes full height */
-            margin: 0; /* Remove default margin */
+        h1, h3, h4 {
+            font-family: 'VT323', monospace; /* Use VT323 for headings */
         }
 
-        .container {
-            padding-top: 50px; /* Add space between the body and the footer */
-            min-height: calc(100vh - 50px); /* Adjust height to account for footer space */
-            box-sizing: border-box; /* Include padding in height calculation */
+        h1 {
+            font-size: 2.5em; /* Increased font size for main heading */
+            font-weight: 700; /* Bold weight for main heading */
         }
 
-        footer {
-            position: relative; /* Ensure footer is positioned correctly */
-            height: 50px; /* Set footer height */
-            margin-top: 50px; /* Add space between the body and the footer */
+        h3 {
+            font-size: 2em; /* Increased font size for subheadings */
+            font-weight: 700; /* Bold weight for subheadings */
         }
 
-        .nes-btn {
-			margin-top: 10px;
-            margin-bottom: 20px; /* Added margin below the button */
+        h4 {
+            font-size: 1.5em; /* Increased font size for smaller headings */
+            font-weight: 400; /* Normal weight for smaller headings */
+        }
+
+        p, li {
+            font-size: 1em;
+            margin-bottom: 1em;
+            font-weight: 400; /* Normal weight for paragraphs and list items */
+        }
+
+        #dp {
+            border-radius: 10px; /* Added slight rounding */
+            width: 100%;
+            max-width: 200px;
+            height: 200px; /* Set height to match width */
         }
     </style>
 </head>
@@ -96,7 +138,7 @@
         <section class="row">
             <!-- IMAGE -->
             <div class="col-xs-12 col-md-4">
-                <img src="pics/profile_pic.jpg" alt="Raunak" class="img-responsive" id="dp">
+                <img src="pics/profile_pic.png" alt="Raunak" class="img-responsive" id="dp">
             </div>
             <!-- DESIGNATION -->
             <div class="col-xs-12 col-md-8">
