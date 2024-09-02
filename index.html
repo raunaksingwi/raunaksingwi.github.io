@@ -1,355 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="auther" content="Raunak Singwi">
-	<meta name="description" content="Raunak Singwi's portfolio.">
-	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1, user-scalable=no"">
-	<title>Raunak Singwi</title>
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.png'>
-9
-	<!--bootstrap-->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Raunak Singwi">
+    <meta name="description" content="Raunak Singwi's portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Raunak Singwi</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 
-	<!--NES.css minify-->
-	<link href="css/nes.min.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css">
 
-	<!--fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <!-- NES.css minify -->
+    <link href="css/nes.min.css" rel="stylesheet">
 
-	<style>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
-		html, body, pre, code, kbd, samp{
-			background-color: #444;
-			color: white;
-			font-family: Press+Start+2P, san-serif;
-		}
+    <style>
+        html, body, pre, code, kbd, samp {
+            background-color: #444;
+            color: white;
+            font-family: 'Press Start 2P', sans-serif;
+            line-height: 1.6; /* Increase line spacing */
+        }
 
-		p{
-			font-size: 1em;
-		}
+        p, li {
+            font-size: 1em;
+            margin-bottom: 1em; /* Add space between paragraphs and list items */
+        }
 
-		li{
-			font-size: 1em;
-		}
+        .title {
+            font-size: 1.5em;
+            padding: 10px;
+        }
 
-		.title{
-			font-size: 1.5em;
-			padding: 10px;
-		}
+        .skills {
+            font-size: 2em;
+        }
 
-		.skills{
-			font-size: 2em;
-		}
+        .bio {
+            font-size: 1em;
+        }
 
-		.bio{
-			font-size: 1em
-		}
+        #dp {
+            border-radius: 200px;
+        }
 
-		#dp{
-			border-radius: 200px;
-		}
-	</style>
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons a {
+            margin: 0 5px;
+        }
+
+        .social-icons i {
+            font-size: 24px; /* Set the size of the icons */
+        }
+
+        html, body {
+            height: 100%; /* Ensure the body takes full height */
+            margin: 0; /* Remove default margin */
+        }
+
+        .container {
+            padding-top: 50px; /* Add space between the body and the footer */
+            min-height: calc(100vh - 50px); /* Adjust height to account for footer space */
+            box-sizing: border-box; /* Include padding in height calculation */
+        }
+
+        footer {
+            position: relative; /* Ensure footer is positioned correctly */
+            height: 50px; /* Set footer height */
+            margin-top: 50px; /* Add space between the body and the footer */
+        }
+
+        .nes-btn {
+			margin-top: 10px;
+            margin-bottom: 20px; /* Added margin below the button */
+        }
+    </style>
 </head>
-
 <body>
-	<div class="container">
-		<!-- PROFILE -->
-		<div class="row">
-			<div class="col-xs-12 col-md-4 col-lg-3" id="about_me">
-				<button type="button" class="nes-btn is-primary title">
-					ABOUT ME
-				</button>
-			</div>
+    <div class="container">
+        <!-- PROFILE -->
+        <section class="row">
+            <div class="col-xs-12 col-md-4 col-lg-3" id="about_me">
+                <button type="button" class="nes-btn is-primary title">ABOUT ME</button>
+            </div>
+        </section>
 
-			<div class="col-xs-12 col-md-8 col-lg-9">
-				<a href="http://www.github.com/raunaksingwi" target="_blank"><i class="nes-icon github is-medium"></i></a>
+        <section class="row">
+            <!-- IMAGE -->
+            <div class="col-xs-12 col-md-4">
+                <img src="pics/profile_pic.jpg" alt="Raunak" class="img-responsive" id="dp">
+            </div>
+            <!-- DESIGNATION -->
+            <div class="col-xs-12 col-md-8">
+                <div class="row">
+                    <div class="col-xs-12" id="name_tag">
+                        <h1>Raunak Singwi</h1>
+                        <h4 class="nes-text is-success">Senior Software Engineer at Cloaked</h4>
+                    </div>
+                    <div class="col-xs-12 lists">
+                        <p>Software engineer with a strong commitment to crafting clean, well-designed, and unit-tested code.</p>
+                        <p>Key Achievements:</p>
+                        <ul class="nes-list">
+                            <li>12 US Patents (10 published; 2 pending)</li>
+                            <li>2 x Winner of VMware Global Hackathon.</li>
+                            <li>4 x Accepted at VMware Research & Development Innovation Offsite which has an acceptance rate of ~10% (2021, 2020, 2019, 2018).</li>
+                            <li>2 x Runner up at VMware Site Level Hackathon.</li>
+                            <li>Accepted at VMware xLabs program, VMware's internal incubator that fast-tracks and nurtures innovative off-roadmap ideas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank"><i class="nes-icon linkedin is-medium"></i></a>
+        <!-- WORK EXPERIENCE -->
+        <section class="row">
+            <div class="col-xs-12">
+                <button type="button" class="nes-btn is-primary title">WORK EXPERIENCE</button>
+            </div>
+        </section>
 
-				<a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw?view_as=subscriber" target="_blank"><i class="nes-icon youtube is-medium"></i></a>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>Senior Software Engineer</h3>
+                <h4 class="nes-text is-success">Cloaked</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Building the future of consumer privacy. [Python, Django, Go]</li>
+                </ul>
+            </div>
+        </section>
 
-				<a href="https://twitter.com/raunak_singwi" target="_blank"><i class="nes-icon twitter is-medium"></i></a>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>Senior Member of Technical Staff</h3>
+                <h4 class="nes-text is-success">Salesforce</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Worked on the development of a monitoring platform for running synthetic tests. The platform ran 200M tests per day at the time I worked on it. [Java]</li>
+                </ul>
+            </div>
+        </section>
 
-				<a href="https://www.instagram.com/raunaksingwi/" target="_blank"><i class="nes-icon instagram is-medium"></i></a>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>Member of Technical Staff 3</h3>
+                <h4 class="nes-text is-success">VMware</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Designed and developed a Kubernetes-on-Router solution that leverages spare resources on a VMware SD-WAN managed router to securely deploy and manage containerised applications on the edge. [Python, Go, Bash, Kubernetes]</li>
+                    <li>This is a new integrated offering by VMware that adds edge compute and SD-WAN together to give you a secure, scalable, zero-touch edge runtime at all of your edge locations at scale. <a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/">Project Santa Cruz</a> <a href="https://www.youtube.com/watch?v=deMUBez9Nrc">VMworld Demo</a></li>
+                </ul>
+            </div>
+        </section>
 
-				<a href="mailto:raunaksingwi7@gmail.com" target="_blank"><i class="nes-icon gmail is-medium"></i></a>
-			</div>
-		</div>
-		<br><br>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>Member of Technical Staff 2</h3>
+                <h4 class="nes-text is-success">VMware</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Migrated a metrics collection platform from an acquired company and integrated with VMware's product.</li>
+                    <li>Converted the monolith platform to micro-services. [Java, C++, Python, gRPC, GraphQL, Docker, Kubernetes, Helm]</li>
+                </ul>
+            </div>
+        </section>
 
-		<div class="row">
-			<!-- IMAGE -->
-			<div class="col-xs-12 col-md-4">
-				<img src="pics/profile_pic.jpg" alt="Raunak" class="img-responsive" id="dp">
-				<br><br>
-			</div>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>Member of Technical Staff 1</h3>
+                <h4 class="nes-text is-success">VMware</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Developed the stage and install features for installing a 1st party appliance (VMware NSX) on VMware vCenter Server.</li>
+                    <li>Wrote APIs for authentication, staging and installation.</li>
+                    <li>Made the deployment process single click by intelligently determining the installation parameters for the 1st party appliance accessing the runtime state of vCenter server.</li>
+                    <li>Maintained more than 75% code coverage through unit-testing [Go]</li>
+                </ul>
+            </div>
+        </section>
 
-			<!-- DESIGNATION -->
-			<div class="col-xs-12 col-md-8">
-				<div class="row">
-					<div class="col-xs-12" id="name_tag">
-						<h1>Raunak Singwi</h1>
-						<h4 class="nes-text is-success">Senior Software Engineer at Cloaked</h4>
-						<br><br>
-					</div>
+        <section class="row">
+            <div class="col-xs-12 col-md-3">
+                <h3>R&D Intern</h3>
+                <h4 class="nes-text is-success">VMware</h4>
+            </div>
+            <div class="col-xs-12 col-md-9 lists">
+                <ul class="nes-list">
+                    <li>Developed a feature/tool that changes the deployment topology of vCenter Server at runtime from having an external SSO appliance (VM) to an embedded SSO. [Python, vSphere SDK]</li>
+                </ul>
+            </div>
+        </section>
 
-					<div class="col-xs-12 lists">
-						<p>Software engineer with a strong commitment to crafting clean, well-designed, and unit-tested code.</p>
-						<br>
-						<p>Key Achievements:</p>
-						<ul class="nes-list">
-							<li> 12 US Patents (10 published; 2 pending)</li>
-							<br>
-							<li> 2 x Winner of VMware Global Hackathon.</li>
-							<br>
-							<li> 4 x Accepted at VMware Research & Development Innovation Offsite which has an acceptance rate of ~10% (2021, 2020, 2019, 2018).</li>
-							<br>
-							<li> 2 x Runner up at VMware Site Level Hackathon.</li>
-							<br>
-							<li> Accepted at VMware xLabs program, VMware's internal incubator that fast-tracks and nurtures innovative off-roadmap ideas.</li>
-							<br>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br><br>
+        <!-- SKILLS -->
+        <section class="row">
+            <div class="col-xs-12">
+                <button type="button" class="nes-btn is-primary title">SKILLS</button>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-xs-12 lists">
+                <ul class="nes-list">
+                    <li>Go, Python, Java, C.</li>
+                    <li>SQL (Postgres, SQLite), Flask, GraphQL, Pub-Sub, REST APIs.</li>
+                    <li>Docker, Kubernetes.</li>
+                </ul>
+            </div>
+        </section>
 
-		<!-- ABOUT ME -->
-		<div class="row">
+        <!-- TECHNICAL ACHIEVEMENTS -->
+        <section class="row">
+            <div class="col-xs-12">
+                <button type="button" class="nes-btn is-primary title">TECHNICAL ACHIEVEMENTS</button>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-xs-12 lists">
+                <ul class="nes-list">
+                    <li>12 US Patents (5 granted; 7 pending)</li>
+                    <li>2 x Winner of VMware Global Hackathon.</li>
+                    <li>2 x Runner-up, VMware Palo Alto Hackathon.</li>
+                    <li>4 x Accepted at VMware Research & Development Innovation Offsite having ~10% acceptance rate.</li>
+                    <li>Accepted at VMware xLabs program, VMware's internal incubator that fast-tracks and nurtures innovative off-roadmap ideas.</li>
+                </ul>
+            </div>
+        </section>
 
-		</div>
-		<br><br><br>
+        <!-- PUBLIC SPEAKING AWARDS -->
+        <section class="row">
+            <div class="col-xs-12">
+                <button type="button" class="nes-btn is-primary title">PUBLIC SPEAKING AWARDS</button>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-xs-12 lists">
+                <ul class="nes-list">
+                    <li>2nd Rank, National Level Debate Competition at Jamia Millia Islamia University, New Delhi. February 17th, 2016.</li>
+                    <li>1st Rank, Inter-Collegiate Debate Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
+                    <li>1st Rank, Inter-Collegiate Extempore Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
+                    <li>Best Speaker, Impromptu Speech a.k.a Table Topics at IBC Titans Toastmasters Club, Oracle Corporation, Bangalore. February 14th, 2019</li>
+                    <li>3rd Rank, Impromptu Speech a.k.a Table Topics at Toastmasters Zonal Level Contest organized at IIM, Bangalore. February 16th, 2019</li>
+                    <li>3rd Rank, Vidharbha Level Elocution Competition organized at 'C.P. and Berar college' in association with Late. Savarkar Memorial Committee, Nagpur. March, 2017</li>
+                    <li>1st Rank, Orator Of The Year, organized by NSS unit, Ramdeobaba College of Engineering and Management, Nagpur. 2015</li>
+                    <li>1st Rank (Team of 5), Youth Parliament, organized by Ramdeobaba College of Engineering and Management, Nagpur. 2016</li>
+                    <li>3rd Rank, Inter-College Debate & Extempore (combined) Competition organized by Government Institute of Forensic Sciences, Nagpur. January 31st, 2017</li>
+                    <li>3rd Rank, University Level Inter-Collegiate Debate Competition, organized by Dr. M.K. Umathe Arts, Science & Shri R.Mokhare Commerce College, Nagpur. January 17th, 2017</li>
+                    <li>3rd Rank, Intra-College debate competition, organized by Power Grid Corporation in association with Ramdeobaba College of Engineering and Management, Nagpur. October 25th, 2016</li>
+                </ul>
+            </div>
+        </section>
 
-		<!-- WORK EXPERIENCE -->
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="button" class="nes-btn is-primary title">
-					WORK EXPERIENCE
-				</button>
-			</div>
-		</div>
-		<br><br>
+        <!-- EDUCATION -->
+        <section class="row">
+            <div class="col-xs-12">
+                <button type="button" class="nes-btn is-primary title">EDUCATION</button>
+            </div>
+        </section>
+        <section class="row">
+            <div class="col-xs-12 col-md-4">
+                <h3>Bachelor of Engineering in Information Technology</h3>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>Ramdeobaba College of Engineering, Nagpur</h3>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>August 2014 to May 2018</h3>
+            </div>
+        </section>
 
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>Senior Software Engineer</h1>
-				<h4 class="nes-text is-success">Cloaked</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-					<li>Building the future of consumer privacy. [Python, Django, Go]</li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>Senior Member of Technical Staff</h1>
-				<h4 class="nes-text is-success">Salesforce</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-					<li>Worked on the development of a monitoring platform for running synthetic tests. The platform ran 200M tests per day at the time I worked on it. [Java]</li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>Member of Technical Staff 3</h1>
-				<h4 class="nes-text is-success">VMware</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-					<li>Designed and developed a Kubernetes-on-Router solution that leverages spare resources on a VMware SD-WAN managed router to securely deploy and manage containerised applicatons on the edge. [Python, Go, Bash, Kubernetes]</li>
-					<br>
-					<li> This is a new integrated offering by VMware that adds edge compute and SD-WAN together to give you a secure, scalable, zero-touch edge runtime at all of your edge locations at scale. <a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/">Project Santa Cruz</a> <a href="https://www.youtube.com/watch?v=deMUBez9Nrc">VMworld Demo</a></li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>Member of Technical Staff 2</h1>
-				<h4 class="nes-text is-success">VMware</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-				<li> Migrated a metrics collection platform from an acquired company and integrated with VMware's product.</li>
-				<br>
-				<li> Converted the monolith pla3orm to micro-services. [Java, C++, Python, gRPC, GraphQL, Docker, Kubernetes, Helm]</li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>Member of Technical Staff 1</h1>
-				<h4 class="nes-text is-success">VMware</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-				<li> Developed the stage and install features for installing a 1st party appliance (VMware NSX) on VMware vCenter Server.</li>
-				<br>
-				<li> Wrote APIs for authenScaSon, staging and installaSon.</li>
-				<br>
-				<li> Made the deployment process single click by intelligently determining the installation parameters for the 1st party appliance accessing the runtime state of vCenter server.</li>
-				<br>
-				<li> Maintained more than 75% code coverage through unit-testing [Go]</li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<div class="row">
-			<div class="col-xs-12 col-md-3">
-				<h3>R&D Intern</h1>
-				<h4 class="nes-text is-success">VMware</h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-9 lists">
-			<ul class="nes-list">
-				<li> Developed a feature/tool that changes the deployment topology of vCenter Server at runtime from having an external SSO appliance (VM) to an embedded SSO. [Python, vSphere SDK]
-				</li>
-			</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<!-- SKILLS -->
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="button" class="nes-btn is-primary title">
-					SKILLS
-				</button>
-			</div>
-		</div>
-		<br>
-		<div class=row>
-			<div class="col-xs-12 lists">
-				<ul class="nes-list">
-					<li> Go, Python, Java, C.</li>
-					<br>
-					<li> SQL (Postgres, SQLite), Flask, GraphQL, Pub-Sub, REST APIs.</li>
-					<br>
-					<li> Docker, Kubernetes.</li>
-					<br>
-				</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<!-- TECHNICAL ACHIEVEMENTS -->
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="button" class="nes-btn is-primary title">
-					TECHNICAL ACHIEVEMENTS
-				</button>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-xs-12 lists">
-				<ul class="nes-list">
-					<li> 12 US Patents (5 granted; 7 pending)</li>
-					<br>
-					<li> 2 x Winner of VMware Global Hackathon.</li>
-					<br>
-					<li> 2 x Runner-up, VMware Palo Alto Hackathon.</li>
-					<br>
-					<li> 4 x Accepted at VMware Research & Development Innovation Offsite having ~10% acceptance rate.</li>
-					<br>
-					<li> Accepted at VMware xLabs program, VMware's internal incubator that fast-tracks and nurtures innovative off-roadmap ideas.</li>
-					<br>
-				</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<!-- PUBLIC SPEAKING AWARDS -->
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="button" class="nes-btn is-primary title">
-					PUBLIC SPEAKING AWARDS
-				</button>
-			</div>
-		</div>
-		<br>
-		<!-- ACHIEVEMENT LIST -->
-		<div class="row">
-			<div class="col-xs-12 lists">
-				<ul class="nes-list">
-						<li> 2nd Rank, National Level Debate Competition at Jamia Millia Islamia University, New Delhi. February 17th, 2016.</li>
-		                <br>
-						<li> 1st Rank, Inter-Collegiate Debate Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
-		                <br>
-		                <li> 1st Rank, Inter-Collegiate Extempore Competition, organized by Tirpude College of Management, Nagpur. February 3rd, 2017.</li>
-						<br>
-		                <li> Best Speaker, Impromptu Speech a.k.a Table Topics at IBC Titans Toastmasters Club, Oracle Corporation, Bangalore. February 14th, 2019</li>
-						<br>
-		                <li> 3rd Rank, Impromptu Speech a.k.a Table Topics at Toastmasters Zonal Level Contest organized at IIM, Bangalore. February 16th, 2019</li>
-		                <br>
-		                <li> 3rd Rank, Vidharbha Level Elocution Competition organized at 'C.P. and Berar college' in association with Late. Savarkar Memorial Committee, Nagpur. March, 2017</li>
-		                <br>
-		                <li> 1st Rank, Orator Of The Year, organized by NSS unit,Ramdeobaba College of Engineering and Management, Nagpur. 2015</li>
-		                <br>
-		                <li> 1st Rank(Team of 5), Youth Parliament, organized by Ramdeobaba College of Engineering and Management, Nagpur. 2016</li>
-		                <br>
-		                <li> 3rd Rank, Inter-College Debate & Extempore (combined) Competition organized by Government Institute of Forensic Sciences, Nagpur. January 31st, 2017</li>
-		                <br>
-		                <li> 3rd Rank, University Level Inter-Collegiate Debate Competition, organized by Dr. M.K. Umathe Arts, Science & Shri R.Mokhare Commerse College, Nagpur. January 17th, 2017</li>
-		                <br>
-		                <li> 3rd Rank, Intra-College debate competition, organized by Power Grid Corporation in association with Ramdeobaba College of Engineering and Management, Nagpur. October 25th, 2016</li>
-		                <br>
-				</ul>
-			</div>
-		</div>
-		<br><br>
-
-		<!-- EDUCATION -->
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="button" class="nes-btn is-primary title">
-					EDUCATION
-				</button>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-xs-12 col-md-4">
-				<h3>Bachelor of Engineerng in Information Techonlogy</h1>
-				<h4 class="nes-text is-success"></h4>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<h3>Ramdeobaba College of Engineering, Nagpur</h1>
-				<br>
-			</div>
-			<div class="col-xs-12 col-md-4">
-				<h3> August 2014 to May 2018</h1>
-				<br>
-			</div>
-
-		</div>
-		<br>
-
-		<!-- FOOTER -->
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<p class="text-muted" style="font-size: 0.75em">Made with <i class="nes-icon is-small heart"></i> by Raunak Singwi</p>
-			</div>
-		</div>
-	</div>
+        <!-- FOOTER -->
+        <footer class="row footer-content">
+            <div class="col-xs-6 text-left">
+                <p class="text-muted" style="font-size: 0.75em">Made with <i class="nes-icon is-small heart"></i> by Raunak Singwi</p>
+            </div>
+            <div class="col-xs-6 text-right social-icons">
+                <a href="http://www.github.com/raunaksingwi" target="_blank"><i class="nes-icon github"></i></a>
+                <a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank"><i class="nes-icon linkedin"></i></a>
+                <a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw?view_as=subscriber" target="_blank"><i class="nes-icon youtube"></i></a>
+                <a href="https://twitter.com/raunak_singwi" target="_blank"><i class="nes-icon twitter"></i></a>
+                <a href="https://www.instagram.com/raunaksingwi/" target="_blank"><i class="nes-icon instagram"></i></a>
+                <a href="mailto:raunaksingwi7@gmail.com" target="_blank"><i class="nes-icon gmail"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
