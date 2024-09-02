@@ -29,22 +29,22 @@
 
         .container {
             padding-top: 50px;
-            min-height: calc(100vh - 100px); /* Adjusted to account for footer height and margin */
+            min-height: calc(100vh - 100px);
             box-sizing: border-box;
         }
 
         .title {
             font-size: 2em; /* Increased font size for titles */
-            padding: 20px; /* Increased padding */
+            padding: 20px;
             margin-bottom: 20px;
-            font-family: 'VT323', monospace; /* Use VT323 for titles */
-            font-weight: 700; /* Bold weight for titles */
+            font-family: 'VT323', monospace;
+            font-weight: 700;
         }
 
         .nes-btn {
             margin-top: 10px;
             margin-bottom: 20px;
-            padding: 15px 30px; /* Increased padding for buttons */
+            padding: 15px 30px;
             transition: background-color 0.3s;
         }
 
@@ -58,26 +58,37 @@
         }
 
         .lists li {
-            margin-bottom: 20px; /* Increased margin for more spacing */
+            margin-bottom: 20px;
             position: relative;
-            padding-left: 30px; /* Space for bullet icon */
+            padding-left: 30px;
         }
 
         .lists li::before {
-            content: '•'; /* Bullet icon */
+            content: '•';
             position: absolute;
             left: 0;
-            color: #3498db; /* Bullet color */
-            font-size: 1.5em; /* Bullet size */
+            color: #3498db;
+            font-size: 1.2em;
+        }
+
+        .lists ul ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .lists ul ul li::before {
+            content: '•';
+            color: #3498db;
+            font-size: 1em;
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0; /* Reduced padding for narrower footer */
-            background-color: #1a252f; /* Changed to a distinct color */
-            margin-top: 20px; /* Added margin for spacing */
+            padding: 10px 0;
+            background-color: #1a252f;
+            margin-top: 20px;
         }
 
         .social-icons a {
@@ -94,35 +105,40 @@
         }
 
         h1, h3, h4 {
-            font-family: 'VT323', monospace; /* Use VT323 for headings */
+            font-family: 'VT323', monospace;
         }
 
         h1 {
             font-size: 2.5em; /* Increased font size for main heading */
-            font-weight: 700; /* Bold weight for main heading */
+            font-weight: 700;
         }
 
         h3 {
             font-size: 2em; /* Increased font size for subheadings */
-            font-weight: 700; /* Bold weight for subheadings */
+            font-weight: 700;
         }
 
         h4 {
             font-size: 1.5em; /* Increased font size for smaller headings */
-            font-weight: 400; /* Normal weight for smaller headings */
+            font-weight: 400;
         }
 
         p, li {
             font-size: 1em;
             margin-bottom: 1em;
-            font-weight: 400; /* Normal weight for paragraphs and list items */
+            font-weight: 400;
         }
 
         #dp {
-            border-radius: 10px; /* Added slight rounding */
+            border-radius: 10px;
             width: 100%;
             max-width: 200px;
-            height: 200px; /* Set height to match width */
+            height: 200px;
+        }
+
+        .timeline {
+            font-size: 1em;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -169,22 +185,31 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
                 <h3>Senior Software Engineer</h3>
                 <h4 class="nes-text is-success">Cloaked</h4>
+                <p class="timeline">January 2023 - Present</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
-                    <li>Building the future of consumer privacy. [Python, Django, Go]</li>
+                    <li>Early employee, member of the backend platform team, working on everything backend including but not limited to:
+                        <ul>
+                            <li>Building new product features, such as the data deletion offering.</li>
+                            <li>Rearchitecting APIs, database schemas and optimising queries</li>
+                            <li>Spam prevention using a combination of rule-based filtering and third-party machine learning models.</li>
+                            <li>Bad actor mitigation.</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
                 <h3>Senior Member of Technical Staff</h3>
                 <h4 class="nes-text is-success">Salesforce</h4>
+                <p class="timeline">May 2022 - January 2023</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
@@ -193,10 +218,11 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
-                <h3>Member of Technical Staff 3</h3>
+                <h3>Member of Technical Staff 3</h4>
                 <h4 class="nes-text is-success">VMware</h4>
+                <p class="timeline">March 2021 - May 2022</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
@@ -206,10 +232,11 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
                 <h3>Member of Technical Staff 2</h3>
                 <h4 class="nes-text is-success">VMware</h4>
+                <p class="timeline">August 2019 - March 2021</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
@@ -219,10 +246,11 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
                 <h3>Member of Technical Staff 1</h3>
                 <h4 class="nes-text is-success">VMware</h4>
+                <p class="timeline">July 2018 - July 2019</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
@@ -234,10 +262,11 @@
             </div>
         </section>
 
-        <section class="row">
+        <section class="row" style="margin-bottom: 30px;">
             <div class="col-xs-12 col-md-3">
                 <h3>R&D Intern</h3>
                 <h4 class="nes-text is-success">VMware</h4>
+                <p class="timeline">January 2018 - July 2018</p>
             </div>
             <div class="col-xs-12 col-md-9 lists">
                 <ul class="nes-list">
