@@ -417,6 +417,62 @@
                 opacity: 0.7;
             }
         }
+
+        .hidden-experience {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+
+        .partial-experience {
+            position: relative;
+        }
+
+        .partial-experience::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(18, 18, 18, 0), var(--bg-color));
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .partial-experience.expanded::after {
+            opacity: 0;
+        }
+
+        #expand-experience {
+            transition: all 0.3s ease;
+        }
+
+        #expand-experience.expanded .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .expand-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .expand-link:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .expand-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-link.expanded i {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -475,36 +531,74 @@
                 <h2>Work Experience</h2>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3>Senior Software Engineer</h3>
-                <h4>Cloaked</h4>
-                <p class="timeline">January 2023 - Present</p>
-                <ul>
-                    <li>Early employee, member of the backend platform team</li>
-                    <li>Building new product features, such as the data deletion offering</li>
-                    <li>Rearchitecting APIs, database schemas and optimising queries</li>
-                    <li>Implementing spam prevention using rule-based filtering and third-party machine learning models</li>
-                    <li>Developing bad actor mitigation strategies</li>
-                </ul>
+            <div id="experience-list">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3>Senior Software Engineer</h3>
+                    <h4>Cloaked</h4>
+                    <p class="timeline">January 2023 - Present</p>
+                    <ul>
+                        <li>Early employee, member of the backend platform team</li>
+                        <li>Building new product features, such as the data deletion offering</li>
+                        <li>Rearchitecting APIs, database schemas and optimising queries</li>
+                        <li>Implementing spam prevention using rule-based filtering and third-party machine learning models</li>
+                        <li>Developing bad actor mitigation strategies</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3>Senior Member of Technical Staff</h3>
+                    <h4>Salesforce</h4>
+                    <p class="timeline">May 2022 - January 2023</p>
+                    <ul>
+                        <li>Worked on the development of a monitoring platform for running synthetic tests which ran 200M tests per day.</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3>Member of Technical Staff 3</h3>
+                    <h4>VMware - Advanced Technology Group, Office of the CTO</h4>
+                    <p class="timeline">March 2021 - May 2022</p>
+                    <ul>
+                        <li>Designed and developed a Kubernetes-on-Router solution that leverages spare resources on a managed SD-WAN router to securely deploy and orchestrate containerised applications on the edge.</li>
+                        <li>Project Santa Cruz. VMworld Demo</li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="partial-experience">
+                    <h3>Member of Technical Staff 2</h3>
+                    <h4>VMware - NSX Platform</h4>
+                    <p class="timeline">August 2019 - March 2021</p>
+                    <ul>
+                        <li>Worked on the development of a metrics collection platform for NSX.</li>
+                    </ul>
+                </div>
+
+                <div class="hidden-experience">
+                    <div data-aos="fade-up" data-aos-delay="500">
+                        <h3>Member of Technical Staff 1</h3>
+                        <h4>VMware - vCenter Platform</h4>
+                        <p class="timeline">July 2018 - July 2019</p>
+                        <ul>
+                            <li>Developed the stage and install features for installing 1st party appliance (NSX) on vCenter Server.</li>
+                        </ul>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <h3>R&D Intern</h3>
+                        <h4>VMware - vCenter Platform</h4>
+                        <p class="timeline">January 2018 - July 2018</p>
+                        <ul>
+                            <li>Developed a feature/tool that changes the deployment topology of vCenter Server at runtime from having an external SSO appliance (VM) to an embedded SSO.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h3>Senior Member of Technical Staff</h3>
-                <h4>Salesforce</h4>
-                <p class="timeline">May 2022 - January 2023</p>
-                <ul>
-                    <li>Developed a monitoring platform for running synthetic tests, handling 200M tests per day [Java]</li>
-                </ul>
-            </div>
-
-            <div data-aos="fade-up" data-aos-delay="300">
-                <h3>Member of Technical Staff 3</h3>
-                <h4>VMware</h4>
-                <p class="timeline">March 2021 - May 2022</p>
-                <ul>
-                    <li>Designed and developed a Kubernetes-on-Router solution for secure deployment and management of containerized applications on the edge [Python, Go, Bash, Kubernetes]</li>
-                    <li>Contributed to Project Santa Cruz, integrating edge compute and SD-WAN for a secure, scalable, zero-touch edge runtime solution</li>
-                </ul>
+            <div class="text-center mt-4">
+                <a href="#" id="expand-experience" class="expand-link">
+                    <span>Show More</span>
+                    <i class="fas fa-chevron-down ml-1"></i>
+                </a>
             </div>
         </section>
 
@@ -641,6 +735,27 @@
 
             fadeElements.forEach(element => {
                 observer.observe(element);
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const expandLink = document.getElementById('expand-experience');
+            const hiddenExperience = document.querySelector('.hidden-experience');
+            const partialExperience = document.querySelector('.partial-experience');
+
+            expandLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (hiddenExperience.style.display === 'none' || hiddenExperience.style.display === '') {
+                    hiddenExperience.style.display = 'block';
+                    expandLink.querySelector('span').textContent = 'Show Less';
+                    expandLink.classList.add('expanded');
+                    partialExperience.classList.add('expanded');
+                } else {
+                    hiddenExperience.style.display = 'none';
+                    expandLink.querySelector('span').textContent = 'Show More';
+                    expandLink.classList.remove('expanded');
+                    partialExperience.classList.remove('expanded');
+                }
             });
         });
     </script>
