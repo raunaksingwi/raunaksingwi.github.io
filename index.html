@@ -186,6 +186,7 @@
             margin-bottom: 30px;
             box-shadow: 0 0 20px rgba(0, 112, 201, 0.5);
             transition: all 0.3s ease;
+            position: relative;
         }
 
         #profile-pic:hover {
@@ -272,9 +273,9 @@
             transform: translate(-50%, -50%);
             width: 110%;
             height: 110%;
-            background: radial-gradient(ellipse at center, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
             z-index: -1;
-            opacity: 1;
+            opacity: 0;
             animation: pulse 2s infinite;
         }
 
@@ -388,6 +389,35 @@
 
         a:hover {
             color: var(--accent-color);
+        }
+
+        #profile-pic::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(ellipse at center, rgba(0, 112, 201, 0.3) 0%, rgba(0, 112, 201, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: profilePulse 2s infinite;
+        }
+
+        @keyframes profilePulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.7;
+            }
         }
     </style>
 </head>
