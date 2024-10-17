@@ -645,7 +645,7 @@
             once: true,
         });
 
-        // Smooth scrolling with parallax effect
+        // Smooth scrolling with custom easing
         $(document).ready(function() {
             $('a[href^="#"]').on('click', function(event) {
                 var target = $(this.getAttribute('href'));
@@ -653,24 +653,11 @@
                     event.preventDefault();
                     $('html, body').stop().animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
-                        var $target = $(target);
-                        $target.focus();
-                        if ($target.is(":focus")) {
-                            return false;
-                        } else {
-                            $target.attr('tabindex','-1');
-                            $target.focus();
-                        }
+                    }, 800, function(progress) {
+                        return Math.pow(progress, 0.7);
                     });
                 }
             });
-
-            // Remove the parallax effect on scroll as it's now a fixed background
-            // $(window).scroll(function() {
-            //     var scrolled = $(window).scrollTop();
-            //     $('#hero').css('background-position-y', -(scrolled * 0.5) + 'px');
-            // });
         });
 
         // Add this new function to handle theme changes
