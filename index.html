@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -24,9 +24,9 @@
         :root {
             --bg-image: url('https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80');
             --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --heading-color: #ffffff;
-            --subheading-color: #81d4fa;
+            --text-color: #1d1d1f;
+            --heading-color: #1d1d1f;
+            --subheading-color: #1d1d1f;
             --section-bg: rgba(255, 255, 255, 0.1);
             --section-border: rgba(255, 255, 255, 0.18);
             --skill-tag-bg: rgba(255, 255, 255, 0.1);
@@ -44,26 +44,27 @@
             :root {
                 --bg-image: url('https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
                 --bg-color: #f0f8ff;
-                --text-color: #000000;  /* Changed to black */
-                --heading-color: #0277bd;  /* Changed to a darker blue color */
-                --subheading-color: #000000;  /* Changed to black */
+                --text-color: #1d1d1f;
+                --heading-color: #1d1d1f;
+                --subheading-color: #1d1d1f;
                 --section-bg: rgba(255, 255, 255, 0.9);
                 --section-border: rgba(0, 0, 0, 0.1);
                 --skill-tag-bg: rgba(2, 119, 189, 0.1);
-                --skill-tag-color: #000000;  /* Changed to black */
+                --skill-tag-color: #000000;
                 --btn-bg: #0277bd;
                 --btn-color: #ffffff;
                 --btn-hover-bg: #01579b;
-                --social-icon-color: #000000;  /* Changed to black */
+                --social-icon-color: #000000;
                 --social-icon-hover: #0277bd;
                 --footer-bg: rgba(2, 119, 189, 0.1);
-                --footer-color: #000000;  /* Changed to black */
-                --section-title-color: #01579b;  /* New variable for section titles, even darker blue */
+                --footer-color: #000000;
+                --section-title-color: #1d1d1f;
             }
         }
 
         body, html {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-weight: 400;
             color: var(--text-color);
             line-height: 1.6;
             background-color: var(--bg-color);
@@ -97,8 +98,8 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 300;
-            letter-spacing: 0.5px;
+            font-weight: 600;
+            letter-spacing: -0.022em;
             color: var(--heading-color);
         }
 
@@ -116,17 +117,18 @@
             margin-top: 0;
             margin-bottom: 30px;
             color: #ffffff;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         h3 {
             font-size: 1.8rem;
             color: var(--subheading-color);
-            font-weight: 400;
+            font-weight: 500;
         }
 
         p, li {
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: -0.016em;
             line-height: 1.8;
             color: var(--text-color);
         }
@@ -240,6 +242,7 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             position: relative;
             display: inline-block;
+            font-weight: 700;
         }
 
         .hero-content h1::after {
@@ -275,6 +278,7 @@
             font-size: 1.5rem;
             margin-bottom: 30px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-weight: 400;
         }
 
         .btn-primary {
@@ -284,6 +288,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             color: var(--btn-color);
+            font-weight: 500;
         }
 
         .btn-primary:hover {
@@ -298,18 +303,18 @@
 
         li {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 15px;
-            color: var(--text-color);  /* Changed to use text-color variable */
+            padding-left: 20px;
+            margin-bottom: 12px;
+            color: var(--text-color);
         }
 
         li::before {
-            content: '•';
+            content: '–';
             position: absolute;
             left: 0;
-            color: var(--text-color);  /* Changed to use text-color variable */
-            font-size: 1.2em;
-            line-height: 1.4;
+            color: #86868b;  /* Apple's typical color for list item markers */
+            font-size: 1em;
+            line-height: 1.5;
         }
 
         /* Add this new style for section headers */
