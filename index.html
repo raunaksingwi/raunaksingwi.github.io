@@ -70,14 +70,18 @@
 
         h2 {
             font-size: 2.5rem;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            border-bottom: none;
             padding-bottom: 10px;
-            margin-top: 40px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-weight: 500;
         }
 
         h3 {
             font-size: 1.8rem;
             color: #81d4fa;
+            font-weight: 400;
         }
 
         p, li {
@@ -87,12 +91,12 @@
         }
 
         .section {
-            background-color: rgba(30, 30, 30, 0.8);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 40px;
             margin-bottom: 50px;
             transition: all 0.3s ease;
@@ -107,14 +111,14 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(ellipse at center, rgba(129, 212, 250, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
             transform: rotate(30deg);
             pointer-events: none;
         }
 
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 40px rgba(129, 212, 250, 0.1);
+            box-shadow: 0 12px 48px rgba(31, 38, 135, 0.25);
         }
 
         #profile-pic {
@@ -130,18 +134,20 @@
         }
 
         .skill-tag {
-            background-color: #37474f;
-            color: #81d4fa;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
             padding: 8px 15px;
             border-radius: 20px;
             display: inline-block;
             margin: 5px;
             font-size: 0.9rem;
             transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
 
         .skill-tag:hover {
-            background-color: #455a64;
+            background-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
@@ -253,6 +259,7 @@
             position: relative;
             padding-left: 25px;
             margin-bottom: 15px;
+            color: #e0e0e0;
         }
 
         li::before {
@@ -262,6 +269,26 @@
             color: #81d4fa;
             font-size: 1.2em;
             line-height: 1.4;
+        }
+
+        /* Add this new style for section headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .section-header::after {
+            content: '';
+            height: 1px;
+            background: linear-gradient(to right, rgba(255,255,255,0.5), rgba(255,255,255,0));
+            flex-grow: 1;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -280,12 +307,14 @@
     <div class="container">
         <!-- Profile Section -->
         <section class="section" id="profile" data-aos="fade-up">
+            <div class="section-header">
+                <h2 data-aos="fade-left">About Me</h2>
+            </div>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <img src="pics/profile.png" alt="Raunak Singwi" id="profile-pic" class="img-fluid" data-aos="zoom-in">
+                    <img src="pics/profile.jpeg" alt="Raunak Singwi" id="profile-pic" class="img-fluid" data-aos="zoom-in">
                 </div>
                 <div class="col-md-8">
-                    <h2 data-aos="fade-left">About Me</h2>
                     <p data-aos="fade-left" data-aos-delay="100">Experienced software engineer with a strong commitment to crafting clean, well-designed, and unit-tested code. Proven track record of innovation and technical leadership.</p>
                     <div class="social-icons" data-aos="fade-up" data-aos-delay="200">
                         <a href="http://www.github.com/raunaksingwi" target="_blank"><i class="fab fa-github"></i></a>
@@ -301,7 +330,9 @@
 
         <!-- Key Achievements Section -->
         <section class="section" id="achievements" data-aos="fade-up">
-            <h2>Key Achievements</h2>
+            <div class="section-header">
+                <h2>Key Achievements</h2>
+            </div>
             <ul>
                 <li data-aos="fade-left" data-aos-delay="100">12 US Patents (10 published; 2 pending)</li>
                 <li data-aos="fade-left" data-aos-delay="200">2-time Winner of VMware Global Hackathon</li>
@@ -313,7 +344,9 @@
 
         <!-- Work Experience Section -->
         <section class="section" id="experience" data-aos="fade-up">
-            <h2>Work Experience</h2>
+            <div class="section-header">
+                <h2>Work Experience</h2>
+            </div>
 
             <div data-aos="fade-up" data-aos-delay="100">
                 <h3>Senior Software Engineer</h3>
@@ -350,24 +383,23 @@
 
         <!-- Skills Section -->
         <section class="section" id="skills" data-aos="fade-up">
-            <h2>Skills</h2>
+            <div class="section-header">
+                <h2>Skills</h2>
+            </div>
             <div data-aos="fade-up" data-aos-delay="100">
-                <span class="skill-tag">Go</span>
                 <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C</span>
-                <span class="skill-tag">SQL (Postgres, SQLite)</span>
-                <span class="skill-tag">Flask</span>
-                <span class="skill-tag">GraphQL</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Go</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">REST API Development</span>
             </div>
         </section>
 
         <!-- Education Section -->
         <section class="section" id="education" data-aos="fade-up">
-            <h2>Education</h2>
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
             <h3>Bachelor of Engineering in Information Technology</h3>
             <p>Ramdeobaba College of Engineering, Nagpur</p>
         </section>
