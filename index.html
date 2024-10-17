@@ -47,7 +47,7 @@
 
         @media (prefers-color-scheme: light) {
             :root {
-                --bg-image: url('https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+                --bg-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
                 --bg-color: #f0f8ff;
                 --text-color: #333333;
                 --heading-color: #1d1d1f;
@@ -673,13 +673,13 @@
             });
         });
 
-        // Add this new function to handle theme changes
+        // Modify the existing handleThemeChange function
         function handleThemeChange(mediaQuery) {
             const bgImage = document.querySelector('.bg-image');
             if (mediaQuery.matches) {
                 // Light mode
                 bgImage.style.opacity = '1';
-                bgImage.style.backgroundImage = 'url("https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")';
+                bgImage.style.backgroundImage = 'url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80")';
             } else {
                 // Dark mode
                 bgImage.style.opacity = '0.5';
@@ -705,7 +705,7 @@
             // Create a new image object to check if the image is cached
             let img = new Image();
             img.src = lightModeMediaQuery.matches
-                ? 'https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
+                ? 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'
                 : 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80';
 
             if (img.complete) {
