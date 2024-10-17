@@ -130,14 +130,14 @@
             font-size: 1.8rem;
             color: var(--title-color);
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         h4 {
             font-size: 1.5rem;
             color: var(--secondary-color);
             font-weight: 400;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         p, li {
@@ -215,7 +215,7 @@
         .timeline {
             font-size: 0.9rem;
             color: var(--secondary-color);
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
 
         .social-icons a {
@@ -473,6 +473,19 @@
         .expand-link.expanded i {
             transform: rotate(180deg);
         }
+
+        /* Add this new style for job entries */
+        .job-entry {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--section-border);
+        }
+
+        /* Style for the last job entry to remove the border */
+        .job-entry:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -532,7 +545,7 @@
             </div>
 
             <div id="experience-list">
-                <div data-aos="fade-up" data-aos-delay="100">
+                <div class="job-entry" data-aos="fade-up" data-aos-delay="100">
                     <h3>Senior Software Engineer</h3>
                     <h4>Cloaked</h4>
                     <p class="timeline">January 2023 - Present</p>
@@ -545,7 +558,7 @@
                     </ul>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="200">
+                <div class="job-entry" data-aos="fade-up" data-aos-delay="200">
                     <h3>Senior Member of Technical Staff</h3>
                     <h4>Salesforce</h4>
                     <p class="timeline">May 2022 - January 2023</p>
@@ -554,7 +567,7 @@
                     </ul>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="300">
+                <div class="job-entry" data-aos="fade-up" data-aos-delay="300">
                     <h3>Member of Technical Staff 3</h3>
                     <h4>VMware - Advanced Technology Group, Office of the CTO</h4>
                     <p class="timeline">March 2021 - May 2022</p>
@@ -564,7 +577,7 @@
                     </ul>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="400" class="partial-experience">
+                <div class="job-entry partial-experience" data-aos="fade-up" data-aos-delay="400">
                     <h3>Member of Technical Staff 2</h3>
                     <h4>VMware - NSX Platform</h4>
                     <p class="timeline">August 2019 - March 2021</p>
@@ -574,7 +587,7 @@
                 </div>
 
                 <div class="hidden-experience">
-                    <div data-aos="fade-up" data-aos-delay="500">
+                    <div class="job-entry" data-aos="fade-up" data-aos-delay="500">
                         <h3>Member of Technical Staff 1</h3>
                         <h4>VMware - vCenter Platform</h4>
                         <p class="timeline">July 2018 - July 2019</p>
@@ -583,7 +596,7 @@
                         </ul>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="600">
+                    <div class="job-entry" data-aos="fade-up" data-aos-delay="600">
                         <h3>R&D Intern</h3>
                         <h4>VMware - vCenter Platform</h4>
                         <p class="timeline">January 2018 - July 2018</p>
