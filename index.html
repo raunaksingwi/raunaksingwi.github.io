@@ -47,7 +47,7 @@
 
         @media (prefers-color-scheme: light) {
             :root {
-                --bg-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80');
+                --bg-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
                 --bg-color: #f0f8ff;
                 --text-color: #333333;
                 --heading-color: #1d1d1f;
@@ -85,19 +85,31 @@
             overflow-x: hidden;
         }
 
-        .bg-image {
+        .bg-image, .bg-image-low-res {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: var(--bg-image);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
+            transition: opacity 2s ease-in-out, filter 1s ease-in-out;
             z-index: -1;
+        }
+
+        .bg-image {
+            opacity: 0;
+        }
+
+        .bg-image-low-res {
+            z-index: -2;
+        }
+
+        @media (max-width: 768px) {
+            .bg-image.mobile-blur, .bg-image-low-res.mobile-blur {
+                filter: blur(5px);
+            }
         }
 
         .container {
@@ -419,13 +431,14 @@
         }
 
         .hidden-experience {
-            display: none;
+            max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s ease-out;
         }
 
-        .partial-experience {
-            position: relative;
+        .hidden-experience.expanded {
+            max-height: 2000px; /* Adjust this value based on your content */
+            transition: max-height 1s ease-in;
         }
 
         .partial-experience::after {
@@ -437,6 +450,7 @@
             height: 100px;
             background: linear-gradient(to bottom, rgba(18, 18, 18, 0), var(--bg-color));
             pointer-events: none;
+            opacity: 1;
             transition: opacity 0.3s ease;
         }
 
@@ -696,49 +710,67 @@
         // Modify the existing handleThemeChange function
         function handleThemeChange(mediaQuery) {
             const bgImage = document.querySelector('.bg-image');
+            const bgImageLowRes = document.querySelector('.bg-image-low-res');
+
+            const darkImageHigh = 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80';
+            const darkImageLow = 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+            const lightImageHigh = 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80';
+            const lightImageLow = 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+
             if (mediaQuery.matches) {
                 // Light mode
-                bgImage.style.opacity = '1';
-                bgImage.style.backgroundImage = 'url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80")';
+                bgImageLowRes.style.backgroundImage = `url("${lightImageLow}")`;
+                loadHighResImage(bgImage, lightImageHigh);
             } else {
                 // Dark mode
-                bgImage.style.opacity = '0.5';
-                bgImage.style.backgroundImage = 'url("https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80")';
+                bgImageLowRes.style.backgroundImage = `url("${darkImageLow}")`;
+                loadHighResImage(bgImage, darkImageHigh);
+            }
+
+            // Apply blur on mobile
+            if (window.innerWidth <= 768) {
+                bgImage.classList.add('mobile-blur');
+                bgImageLowRes.classList.add('mobile-blur');
+            } else {
+                bgImage.classList.remove('mobile-blur');
+                bgImageLowRes.classList.remove('mobile-blur');
             }
         }
 
-        // Check for theme preference changes
-        const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-        handleThemeChange(lightModeMediaQuery); // Set initial state
-        lightModeMediaQuery.addListener(handleThemeChange); // Listen for changes
+        function loadHighResImage(imgElement, src) {
+            const img = new Image();
+            img.src = src;
+            img.onload = function() {
+                imgElement.style.backgroundImage = `url("${src}")`;
+                imgElement.style.opacity = '1';
+            };
+        }
 
-        // Modify the existing DOMContentLoaded event listener
+        // Add this new function to handle resize events
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                document.querySelector('.bg-image').classList.add('mobile-blur');
+                document.querySelector('.bg-image-low-res').classList.add('mobile-blur');
+            } else {
+                document.querySelector('.bg-image').classList.remove('mobile-blur');
+                document.querySelector('.bg-image-low-res').classList.remove('mobile-blur');
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', (event) => {
             const bgImage = document.querySelector('.bg-image');
+            const bgImageLowRes = document.createElement('div');
+            bgImageLowRes.className = 'bg-image bg-image-low-res';
+            bgImage.parentNode.insertBefore(bgImageLowRes, bgImage);
 
-            function loaded() {
-                setTimeout(() => {
-                    handleThemeChange(lightModeMediaQuery);
-                }, 1000); // Delay the fade-in by 1 second
-            }
+            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
+            handleThemeChange(lightModeMediaQuery);
+            lightModeMediaQuery.addListener(handleThemeChange);
 
-            // Create a new image object to check if the image is cached
-            let img = new Image();
-            img.src = lightModeMediaQuery.matches
-                ? 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80'
-                : 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80';
-
-            if (img.complete) {
-                loaded();
-            } else {
-                img.addEventListener('load', loaded);
-            }
-
-            // Fallback in case image fails to load
-            img.addEventListener('error', function() {
-                console.error('Background image failed to load');
-                bgImage.style.display = 'none';
-            });
+            // Add event listener for window resize
+            window.addEventListener('resize', handleResize);
+            // Initial call to handleResize
+            handleResize();
         });
 
         // Add new script for fade-in animation
@@ -765,16 +797,17 @@
 
             expandLink.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (hiddenExperience.style.display === 'none' || hiddenExperience.style.display === '') {
-                    hiddenExperience.style.display = 'block';
+                hiddenExperience.classList.toggle('expanded');
+                partialExperience.classList.toggle('expanded');
+
+                if (hiddenExperience.classList.contains('expanded')) {
                     expandLink.querySelector('span').textContent = 'Show Less';
                     expandLink.classList.add('expanded');
-                    partialExperience.classList.add('expanded');
                 } else {
-                    hiddenExperience.style.display = 'none';
                     expandLink.querySelector('span').textContent = 'Show More';
                     expandLink.classList.remove('expanded');
-                    partialExperience.classList.remove('expanded');
+                    // Scroll to the start of the experience section
+                    document.getElementById('experience').scrollIntoView({behavior: 'smooth'});
                 }
             });
         });
