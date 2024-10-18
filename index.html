@@ -22,7 +22,7 @@
 
     <style>
         :root {
-            --bg-image: url('https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80');
+            --bg-image: url('pics/dark_background.jpeg');
             --bg-color: #121212;
             --text-color: #e0e0e0;
             --heading-color: #ffffff;
@@ -47,7 +47,7 @@
 
         @media (prefers-color-scheme: light) {
             :root {
-                --bg-image: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+                --bg-image: url('pics/light_background.jpg');
                 --bg-color: #f0f8ff;
                 --text-color: #333333;
                 --heading-color: #1d1d1f;
@@ -712,19 +712,17 @@
             const bgImage = document.querySelector('.bg-image');
             const bgImageLowRes = document.querySelector('.bg-image-low-res');
 
-            const darkImageHigh = 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=1947&q=80';
-            const darkImageLow = 'https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
-            const lightImageHigh = 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80';
-            const lightImageLow = 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
+            const darkImage = 'pics/dark_background.jpeg';
+            const lightImage = 'pics/light_background.jpg';
 
             if (mediaQuery.matches) {
                 // Light mode
-                bgImageLowRes.style.backgroundImage = `url("${lightImageLow}")`;
-                loadHighResImage(bgImage, lightImageHigh);
+                bgImageLowRes.style.backgroundImage = `url("${lightImage}")`;
+                loadHighResImage(bgImage, lightImage);
             } else {
                 // Dark mode
-                bgImageLowRes.style.backgroundImage = `url("${darkImageLow}")`;
-                loadHighResImage(bgImage, darkImageHigh);
+                bgImageLowRes.style.backgroundImage = `url("${darkImage}")`;
+                loadHighResImage(bgImage, darkImage);
             }
 
             // Apply blur on mobile
