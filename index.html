@@ -71,6 +71,11 @@
             }
         }
 
+        * {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
         body, html {
             font-family: var(--font-family);
             font-weight: 400;
@@ -83,6 +88,9 @@
             background-repeat: no-repeat;
             background-size: cover;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
         }
 
         .bg-image, .bg-image-low-res {
@@ -173,14 +181,16 @@
                 0 8px 32px rgba(31, 38, 135, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2),
                 0 0 0 1px rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            backdrop-filter: blur(15px) saturate(150%);
+            -webkit-backdrop-filter: blur(15px) saturate(150%);
             border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 3rem;
             margin-bottom: 4rem;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
             position: relative;
             overflow: hidden;
+            will-change: transform;
+            contain: layout style paint;
         }
 
         .section::before {
@@ -224,13 +234,13 @@
         }
 
         .section:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-6px) scale(1.01);
             box-shadow: 
-                0 20px 60px rgba(31, 38, 135, 0.3),
+                0 16px 48px rgba(31, 38, 135, 0.25),
                 inset 0 1px 0 rgba(255, 255, 255, 0.3),
                 0 0 0 1px rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(25px) saturate(200%);
-            -webkit-backdrop-filter: blur(25px) saturate(200%);
+            backdrop-filter: blur(18px) saturate(160%);
+            -webkit-backdrop-filter: blur(18px) saturate(160%);
         }
 
         .section:hover::before {
@@ -246,8 +256,9 @@
             max-width: 250px;
             margin-bottom: 30px;
             box-shadow: 0 0 20px rgba(0, 112, 201, 0.5);
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
             position: relative;
+            will-change: transform;
         }
 
         #profile-pic:hover {
@@ -267,15 +278,17 @@
             margin: 8px;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            backdrop-filter: blur(15px) saturate(180%);
-            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(12px) saturate(150%);
+            -webkit-backdrop-filter: blur(12px) saturate(150%);
             border: 1px solid rgba(255, 255, 255, 0.3);
             box-shadow: 
                 0 4px 20px rgba(31, 38, 135, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
             position: relative;
             overflow: hidden;
+            will-change: transform;
+            contain: layout style paint;
         }
 
         .skill-tag::before {
@@ -322,19 +335,20 @@
             color: var(--social-icon-color);
             font-size: 1.8rem;
             margin: 0 15px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             padding: 12px;
             border-radius: 50%;
             background: linear-gradient(135deg, 
                 rgba(255, 255, 255, 0.1) 0%, 
                 rgba(255, 255, 255, 0.05) 100%
             );
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            will-change: transform;
         }
 
         .social-icons a:hover {
@@ -355,13 +369,14 @@
                 rgba(255, 255, 255, 0.1) 0%, 
                 rgba(255, 255, 255, 0.05) 100%
             );
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            backdrop-filter: blur(10px) saturate(120%);
+            -webkit-backdrop-filter: blur(10px) saturate(120%);
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             color: var(--footer-color);
             padding: 30px 0;
             margin-top: 60px;
             border-radius: 25px 25px 0 0;
+            contain: layout style paint;
         }
 
         .parallax {
@@ -437,16 +452,17 @@
             padding: 0.875rem 2rem;
             font-size: 1.1rem;
             border-radius: 25px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
             color: #ffffff;
             font-weight: 600;
-            backdrop-filter: blur(15px) saturate(180%);
-            -webkit-backdrop-filter: blur(15px) saturate(180%);
+            backdrop-filter: blur(12px) saturate(150%);
+            -webkit-backdrop-filter: blur(12px) saturate(150%);
             box-shadow: 
                 0 8px 32px rgba(79, 195, 247, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
             position: relative;
             overflow: hidden;
+            will-change: transform;
         }
 
         .btn-primary::before {
@@ -1032,34 +1048,53 @@
             });
         });
 
-        // Enhanced Liquid Glass mouse tracking for specular highlights
+        // Enhanced Liquid Glass mouse tracking for specular highlights with throttling
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.section');
+            let ticking = false;
+            
+            function updateMousePosition(section, x, y) {
+                section.style.setProperty('--mouse-x', `${x}%`);
+                section.style.setProperty('--mouse-y', `${y}%`);
+                ticking = false;
+            }
             
             sections.forEach(section => {
                 section.addEventListener('mousemove', (e) => {
-                    const rect = section.getBoundingClientRect();
-                    const x = ((e.clientX - rect.left) / rect.width) * 100;
-                    const y = ((e.clientY - rect.top) / rect.height) * 100;
-                    
-                    section.style.setProperty('--mouse-x', `${x}%`);
-                    section.style.setProperty('--mouse-y', `${y}%`);
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            const rect = section.getBoundingClientRect();
+                            const x = ((e.clientX - rect.left) / rect.width) * 100;
+                            const y = ((e.clientY - rect.top) / rect.height) * 100;
+                            updateMousePosition(section, x, y);
+                        });
+                        ticking = true;
+                    }
                 });
                 
                 section.addEventListener('mouseleave', () => {
-                    section.style.setProperty('--mouse-x', '50%');
-                    section.style.setProperty('--mouse-y', '50%');
+                    requestAnimationFrame(() => {
+                        section.style.setProperty('--mouse-x', '50%');
+                        section.style.setProperty('--mouse-y', '50%');
+                    });
                 });
             });
 
-            // Add shimmer effect for skill tags
+            // Add shimmer effect for skill tags with reduced frequency
             const skillTags = document.querySelectorAll('.skill-tag');
             skillTags.forEach(tag => {
+                let shimmerTimeout;
                 tag.addEventListener('mouseenter', () => {
-                    tag.style.animation = 'shimmer 1.5s ease-in-out';
+                    clearTimeout(shimmerTimeout);
+                    tag.style.animation = 'shimmer 1.2s ease-in-out';
                 });
                 
                 tag.addEventListener('animationend', () => {
+                    tag.style.animation = '';
+                });
+                
+                tag.addEventListener('mouseleave', () => {
+                    clearTimeout(shimmerTimeout);
                     tag.style.animation = '';
                 });
             });
