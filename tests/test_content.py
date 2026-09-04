@@ -15,6 +15,25 @@ def section(name):
     return text(match[1]) if match else ''
 
 class PersonalWebsiteTests(unittest.TestCase):
+    def test_classic_desktop_navigation(self):
+        self.assertIn('aria-label="Desktop menu"', HTML)
+        self.assertIn('class="window-title"', HTML)
+        self.assertIn('href="css/classic.css"', HTML)
+        self.assertIn('class="skip-link"', HTML)
+
+    def test_page_works_without_external_ui_dependencies(self):
+        self.assertNotRegex(HTML, r'<script[^>]+src="https://')
+        self.assertNotRegex(HTML, r'<link[^>]+href="https://')
+
+    def test_aqua_desktop_has_dock_and_window_controls(self):
+        self.assertIn('aria-label="Dock"', HTML)
+        self.assertIn('class="traffic-lights"', HTML)
+        self.assertIn('class="welcome-folders"', HTML)
+
+    def test_window_manager_is_loaded_locally(self):
+        self.assertIn('<script src="js/windows.js" defer></script>', HTML)
+        self.assertTrue((ROOT / 'js/windows.js').is_file())
+
     def test_reading_order(self):
         ids = re.findall(r'<section\b[^>]*id="([^"]+)"', HTML)
         self.assertEqual(ids, ['hero', 'now', 'work', 'about', 'contact'])

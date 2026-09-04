@@ -1,0 +1,78 @@
+async (page) => {
+    const assert = (condition, message) => { if (!condition) throw new Error(message); };
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.coverage.startJSCoverage();
+    await page.goto('http://127.0.0.1:8765/');
+    const win = id => page.locator(`[data-window="${id}"]`);
+    const dock = id => page.locator(`.dock a[href="#${id}"]`);
+    assert(await page.locator('[data-window]').count() === 5, 'Five independent windows');
+    assert(await win('hero').isVisible(), 'Welcome starts open');
+    const homeBox = await win('hero').boundingBox();
+    assert(homeBox.width > 1300, 'Window uses most of the desktop width');
+    for (const id of ['now', 'work', 'about', 'contact']) await dock(id).click();
+    assert(await page.locator('[data-window]:visible').count() === 5, 'Opening windows preserves others');
+    assert(await win('contact').evaluate(el => el.classList.contains('is-active')), 'Newest window is in front');
+    await win('contact').getByRole('button', {name:'Close window',exact:true}).click();
+    assert(!await win('contact').isVisible(), 'Close hides the window');
+    assert(!(await dock('contact').getAttribute('class') || '').includes('is-open'), 'Closed dock indicator cleared');
+    await win('about').getByRole('button', {name:'Minimize window',exact:true}).click();
+    assert(!await win('about').isVisible(), 'Minimized window hidden');
+    assert((await dock('about').getAttribute('class')).includes('is-open'), 'Minimized window stays in dock');
+    await dock('about').click();
+    assert(await win('about').isVisible(), 'Dock restores minimized window');
+    await win('about').getByRole('button', {name:'Maximize window',exact:true}).click();
+    assert((await win('about').boundingBox()).width > 1400, 'Maximize fills desktop');
+    await win('about').getByRole('button', {name:'Restore window size',exact:true}).click();
+    const before = await win('about').boundingBox();
+    const title = await win('about').locator('.window-title').boundingBox();
+    await page.mouse.move(title.x + title.width / 2, title.y + 15);
+    await page.mouse.down();
+    await page.mouse.move(title.x + title.width / 2 + 90, title.y + 65, {steps:5});
+    await page.mouse.up();
+    const after = await win('about').boundingBox();
+    assert(after.x > before.x + 80 && after.y > before.y + 40, 'Dragging moves window');
+    await win('about').locator('.window-title').dblclick({position:{x:200,y:15}});
+    assert(await win('about').evaluate(el=>el.classList.contains('is-maximized')), 'Double click maximizes');
+    await win('about').locator('.window-title').dblclick({position:{x:200,y:15}});
+    await win('about').focus();
+    await page.keyboard.press('Escape');
+    assert(!await win('about').isVisible(), 'Escape closes focused window');
+    await dock('hero').click();
+    await win('hero').getByRole('link',{name:'What I’m building',exact:true}).click();
+    assert(await win('now').isVisible(), 'Folder and content links open window');
+    await dock('work').click();
+    await page.goBack();
+    assert(await win('now').evaluate(el=>el.classList.contains('is-active')), 'Browser Back activates previous window');
+    const document = win('work').locator('.window-document');
+    await dock('work').click();
+    await document.evaluate(el=>el.scrollTop=120);
+    const scroll = await document.evaluate(el=>el.scrollTop);
+    await win('work').getByRole('button',{name:'Minimize window',exact:true}).click();
+    await dock('work').click();
+    assert(await document.evaluate(el=>el.scrollTop) === scroll, 'Reopening preserves scroll position');
+    const layouts=[];
+    for (const width of [768,390,320]) {
+        await page.setViewportSize({width,height:844});
+        const box=await win('work').boundingBox();
+        assert(box.x >= 0 && box.x + box.width <= width + 1,'Window stays within viewport');
+        assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No horizontal overflow');
+        layouts.push(width);
+    }
+    await page.setViewportSize({width:1440,height:1000});
+    for (const id of ['hero','now','work']) {
+        if (await win(id).isVisible()) await win(id).getByRole('button',{name:'Close window',exact:true}).click();
+    }
+    assert(await page.locator('[data-window]:visible').count() === 0, 'All windows can close');
+    assert(await page.locator('.dock a').first().evaluate(el=>el===document.activeElement), 'Focus returns to dock');
+    await dock('hero').click();
+    await dock('now').click();
+    const coverage=await page.coverage.stopJSCoverage();
+    const script=coverage.find(entry=>entry.url.endsWith('/js/windows.js'));
+    const bytes=new Uint8Array(script.source.length);
+    const ranges=script.functions.flatMap(fn=>fn.ranges).sort((a,b)=>(b.endOffset-b.startOffset)-(a.endOffset-a.startOffset));
+    for (const range of ranges) bytes.fill(range.count>0 ? 1 : 0,range.startOffset,range.endOffset);
+    const percent=bytes.reduce((total,value)=>total+value,0)/bytes.length*100;
+    assert(percent>=80,'Window manager coverage must be at least 80%');
+    await page.screenshot({path:'/tmp/aqua-multiple-windows.png'});
+    return {passed:true, testedWidths:layouts, windowManagerCoverage:percent.toFixed(1)+'%'};
+}
