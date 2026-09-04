@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Raunak Singwi">
-    <meta name="description" content="Raunak Singwi, Founder &amp; CEO at Ravi and South Park Commons Founder Fellow. Building identity infrastructure for AI agents.">
+    <meta name="description" content="I’m Raunak Singwi. I’m excited about collaborative AI and building Ravioli for shared conversations, alongside Ravi, identities for AI agents.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raunak Singwi | Founder &amp; CEO at Ravi</title>
+    <title>Raunak Singwi | Building useful software</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
 
     <!-- Bootstrap -->
@@ -760,190 +760,123 @@
             height: 24px;
             object-fit: contain;
         }
+
+        /* Personal pages favor readable stories over résumé rows. */
+        #hero { min-height: 540px; height: auto; padding: 110px 24px 90px; }
+        #hero .hero-content { max-width: 850px; margin: auto; }
+        #hero .intro-line { font-size: clamp(1.15rem, 2.5vw, 1.65rem); line-height: 1.6; }
+        .personal-page { max-width: 1040px; }
+        .personal-page p { max-width: 70ch; }
+        .personal-page .section { scroll-margin-top: 40px; }
+        .personal-page .section > * + * { margin-top: 1.2rem; }
+        .personal-links { display: flex; flex-wrap: wrap; gap: 12px 26px; align-items: center; }
+        #hero .personal-links { justify-content: center; margin-top: 32px; }
+        .personal-links a, .personal-page a { text-decoration: underline; text-underline-offset: 5px; }
+        a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 6px; }
+        .project-story + .project-story { margin-top: 44px; padding-top: 40px; border-top: 1px solid var(--section-border); }
+        .project-story h3 { color: var(--heading-color); }
+        .project-company { display: flex; align-items: center; gap: 10px; color: var(--subheading-color); }
+        .supporting-copy { color: var(--subheading-color); font-size: 0.95rem; }
+        .about-layout { display: grid; grid-template-columns: 180px 1fr; gap: 32px; align-items: start; }
+        .about-layout #profile-pic { width: 180px; height: 180px; object-fit: cover; box-shadow: none; }
+        .contact-email { overflow-wrap: anywhere; }
+        @media (max-width: 600px) {
+            #hero { min-height: 0; padding: 72px 22px 60px; }
+            #hero h1 { font-size: 2.8rem; }
+            .personal-page .section { padding: 28px 22px; }
+            .personal-page h2 { font-size: 1.9rem; }
+            .personal-page h3 { font-size: 1.4rem; }
+            .about-layout { grid-template-columns: 1fr; gap: 12px; }
+            .about-layout #profile-pic { width: 140px; height: 140px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+            html, body { scroll-behavior: auto; }
+        }
     </style>
 </head>
 <body>
     <div class="bg-image"></div>
 
-    <!-- Hero Section -->
     <section id="hero" class="parallax">
         <div class="hero-content">
-            <h1 data-aos="fade-down">Raunak Singwi</h1>
-            <p data-aos="fade-up">Founder &amp; CEO at Ravi • Software Engineer</p>
-            <a href="#profile" class="btn btn-primary" data-aos="zoom-in">Learn More</a>
+            <h1>Raunak Singwi</h1>
+            <p class="intro-line">I’m excited about collaborative AI.<br>I think AI needs its Google Docs moment: moving from private conversations to something we can use together.</p>
+            <nav class="personal-links" aria-label="Explore this page">
+                <a href="#now">Building now</a>
+                <a href="#work">Selected work</a>
+                <a href="#about">About me</a>
+                <a href="#contact">Get in touch</a>
+            </nav>
         </div>
     </section>
 
-    <div class="container">
-        <!-- Profile Section -->
-        <section class="section" id="profile" data-aos="fade-up">
-            <div class="section-header">
-                <h2 data-aos="fade-left">About Me</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="pics/profile.jpeg" alt="Raunak Singwi" id="profile-pic" class="img-fluid" data-aos="zoom-in">
+    <main class="container personal-page">
+        <section class="section" id="now">
+            <div class="section-header"><h2>Building now</h2></div>
+            <article class="project-story">
+                <h3>Ravioli</h3>
+                <p>I’m exploring collaborative AI with Ravioli, where an AI can join your group chat, share context with everyone, and take part in the conversation.</p>
+                <p>Jino, Ravioli’s first AI, can chat with you privately or join your group. He remembers what happened, hosts games, and weighs in when the group wants another perspective.</p>
+                <a href="https://tryravioli.com" target="_blank" rel="noopener noreferrer">Explore Ravioli at tryravioli.com</a>
+            </article>
+            <article class="project-story">
+                <h3>Ravi</h3>
+                <p>I’m also building Ravi: identities for AI agents. It gives agents phone numbers, email addresses, and credential vaults so they can use services and operate in the real world.</p>
+                <a href="https://ravi.app" target="_blank" rel="noopener noreferrer">Explore Ravi at ravi.app</a>
+            </article>
+            <p class="supporting-copy">I’m a Founder Fellow at South Park Commons, which backs my company.</p>
+        </section>
+
+        <section class="section" id="work">
+            <div class="section-header"><h2>Selected work</h2></div>
+            <article class="project-story">
+                <h3>Making personal data harder to find</h3>
+                <p class="project-company"><img src="pics/cloaked.png" alt="" class="company-logo">Cloaked</p>
+                <p>Personal information can be scattered across hundreds of data broker sites. Removing it by hand is slow, repetitive work.</p>
+                <p>At Cloaked, I designed and shipped the Data Removal system to automate discovery and removal across more than 120 data broker sites. It became the company’s flagship product.</p>
+                <p>I joined early and built backend infrastructure as the engineering team grew from 3 to 15. That work also included spam prevention and protection against fraud, phishing, and impersonation.</p>
+                <a href="https://www.cloaked.com/features/data-removal" target="_blank" rel="noopener noreferrer">Explore Cloaked’s Data Removal</a>
+            </article>
+            <article class="project-story">
+                <h3>Putting spare computing power to work</h3>
+                <p class="project-company"><img src="pics/vmw.png" alt="" class="company-logo">Project Santa Cruz at VMware</p>
+                <p>A router can have computing capacity sitting idle. Our question was whether that capacity could run applications close to where they were needed.</p>
+                <p>I helped design and build a Kubernetes-on-Router solution to deploy and manage applications on SD-WAN routers. The hackathon project became a funded, full-time team within VMware’s Office of the CTO and was showcased at VMworld 2021.</p>
+                <div class="personal-links">
+                    <a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/" target="_blank" rel="noopener noreferrer">Read about Project Santa Cruz</a>
+                    <a href="https://www.youtube.com/watch?v=deMUBez9Nrc" target="_blank" rel="noopener noreferrer">Watch the VMworld presentation</a>
                 </div>
-                <div class="col-md-8">
-                    <p data-aos="fade-left" data-aos-delay="100">I’m the Founder &amp; CEO at Ravi, building identity infrastructure that gives AI agents phone numbers, email addresses, and credential vaults to operate in the real world. I’m also a Founder Fellow at South Park Commons. Previously, I built privacy products at Cloaked and worked on cloud infrastructure at Salesforce and VMware.
-                    </p>
-                    <div class="social-icons" data-aos="fade-up" data-aos-delay="200">
-                        <a href="http://www.github.com/raunaksingwi" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://twitter.com/raunak_singwi" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/cost.to.candidate/reels/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="mailto:raunaksingwi7@gmail.com"><i class="fas fa-envelope"></i></a>
+            </article>
+        </section>
+
+        <section class="section" id="about">
+            <div class="section-header"><h2>A little about me</h2></div>
+            <div class="about-layout">
+                <img src="pics/profile.jpeg" alt="Raunak Singwi" id="profile-pic" width="220" height="220" loading="lazy">
+                <div>
+                    <p>Before founding my company, I worked at Cloaked, Salesforce, and VMware, building privacy products, monitoring systems, and cloud infrastructure. I studied Information Technology at Ramdeobaba College in Nagpur.</p>
+                    <p>Public speaking has been part of that journey too, from college debate and extempore competitions to Toastmasters. I’ve spoken at national debate competitions and at the Toastmasters zonal contest at IIM Bangalore.</p>
+                    <p class="supporting-copy">Along the way, my work has led to 12 US patents in cloud infrastructure, edge computing, and container security, and two VMware Global Hackathon wins.</p>
+                    <div class="personal-links">
+                        <a href="https://patents.google.com/?inventor=Raunak+Ravindra+Singwi" target="_blank" rel="noopener noreferrer">Browse my patents</a>
+                        <a href="Raunak_Singwi_Resume.pdf" download>Download my résumé (PDF)</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Key Achievements Section -->
-        <section class="section" id="achievements" data-aos="fade-up">
-            <div class="section-header">
-                <h2>Key Achievements</h2>
-            </div>
-            <ul>
-                <li data-aos="fade-left" data-aos-delay="100">Recipient of the <b>US O1 Visa</b>, recognizing extraordinary ability in software engineering.</li>
-                <li data-aos="fade-left" data-aos-delay="200">Published <b>12 US patents</b> with the USPTO, spanning cloud infrastructure, edge computing, and container security.</li>
-                <li data-aos="fade-left" data-aos-delay="300"><b>2x VMware Global Hackathon Winner</b>, at a company of 30,000+ employees.</li>
-                <li data-aos="fade-left" data-aos-delay="400">Selected <b>4x</b> for VMware R&D Innovation Offsite, with an approximately 10% acceptance rate.</li>
-                <li data-aos="fade-left" data-aos-delay="500">Admitted to <b>VMware xLabs</b>, an incubator for off-roadmap ideas with a &lt;5% acceptance rate.</li>
-            </ul>
-        </section>
-
-        <!-- Work Experience Section -->
-        <section class="section" id="experience" data-aos="fade-up">
-            <div class="section-header">
-                <h2>Work Experience</h2>
-            </div>
-
-            <div id="experience-list">
-                <div class="job-entry" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Founder &amp; CEO</h3>
-                    <h4>Ravi</h4>
-                    <p class="timeline">January 2026 - Present</p>
-                    <ul>
-                        <li>Building <b>identity infrastructure for AI agents</b>: phone numbers, email addresses, and credential vaults to operate autonomously in the real world.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Founder Fellow</h3>
-                    <h4>South Park Commons</h4>
-                    <p class="timeline">March 2026 - Present</p>
-                    <ul>
-                        <li>Raised <b>$400K in funding</b> from South Park Commons to build Ravi. Selected into a small cohort of founders with direct partner mentorship.</li>
-                    </ul>
-                    <p class="timeline">Previously Member: November 2025 - March 2026</p>
-                    <p>Explored AI-agent identity, communication, and autonomy, developing the conviction that led to founding Ravi.</p>
-                </div>
-
-                <div class="job-entry" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Senior Software Engineer</h3>
-                    <h4><img src="pics/cloaked.png" alt="Cloaked" class="company-logo">Cloaked</h4>
-                    <p class="timeline">January 2023 - July 2025</p>
-                    <ul>
-                        <li>Early backend hire at a privacy-focused startup; architected and built <b>core product infrastructure</b> as the engineering team grew from 3 to 15 engineers.</li>
-                        <li>Designed and shipped Cloaked’s <a href="https://www.cloaked.com/features/data-removal" target="_blank">Data Removal system</a>, now the company’s flagship product, automating personal data discovery and removal across <b>120+ data broker sites</b>.</li>
-                        <li>Revamped APIs and database schemas, enhancing <b>performance</b> and <b>maintainability</b>.</li>
-                        <li>Architected <b>spam prevention and anti-abuse systems</b> using heuristic algorithms and AI-based detection, protecting users from fraud, phishing, and impersonation at scale.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Senior Member of Technical Staff</h3>
-                    <h4><img src="pics/salesforce.png" alt="Salesforce" class="company-logo">Salesforce</h4>
-                    <p class="timeline">May 2022 - January 2023</p>
-                    <ul>
-                        <li>Worked on the development of a <b>synthetic monitoring platform</b>, executing 200M+ tests daily, ensuring enterprise-grade reliability and performance.</li>
-                    </ul>
-                </div>
-
-                <div class="job-entry" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Member of Technical Staff 1 - 3</h3>
-                    <h4><img src="pics/vmw.png" alt="VMware" class="company-logo">VMware</h4>
-                    <p class="timeline">July 2018 - May 2022</p>
-                    <ul>
-                        <li>Designed and developed a Kubernetes-on-Router solution that leverages spare resources on a managed SD-WAN router to securely deploy and orchestrate containerised applications on the edge (<a href="https://octo.vmware.com/announcing-project-santa-cruz-and-more/" target="_blank">Project Santa Cruz</a> showcased at <a href="https://www.youtube.com/watch?v=deMUBez9Nrc" target="_blank">VMworld 2021</a>).</li>
-                        <li>Hackathon project was funded into a <b>full-time team within the Office of the CTO</b>.</li>
-                        <li>Automated <b>Kubernetes cluster deployment (VMware Tanzu)</b> on vCenter Server and introduced unit testing practices and Go to the team.</li>
-                    </ul>
-                </div>
-
-                <div class="hidden-experience">
-                    <div class="job-entry partial-experience" data-aos="fade-up" data-aos-delay="400">
-                        <h3>R&D Intern</h3>
-                        <h4><img src="pics/vmw.png" alt="VMware" class="company-logo">VMware</h4>
-                        <p class="timeline">January 2018 - July 2018</p>
-                        <ul>
-                            <li>Developed an innovative runtime tool to transform vCenter Server topologies from external to embedded SSO, significantly reducing deployment complexity.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-4">
-                <a href="#" id="expand-experience" class="expand-link">
-                    <span>Show More</span>
-                    <i class="fas fa-chevron-down ml-1"></i>
-                </a>
+        <section class="section" id="contact">
+            <div class="section-header"><h2>Get in touch</h2></div>
+            <p>Thinking about collaborative AI, or building something that helps people and AI work together? I’d enjoy comparing notes. You’re welcome to reach out about Ravioli, Ravi, or something you’re building.</p>
+            <p><a class="contact-email" href="mailto:raunaksingwi7@gmail.com">raunaksingwi7@gmail.com</a></p>
+            <div class="personal-links">
+                <a href="https://github.com/raunaksingwi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/raunak-singwi-407087bb/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.youtube.com/channel/UCS3X-xdL0iS0hdHHShrMifw" target="_blank" rel="noopener noreferrer">YouTube</a>
             </div>
         </section>
-
-        <!-- Skills Section -->
-        <section class="section" id="skills" data-aos="fade-up">
-            <div class="section-header">
-                <h2>Skills</h2>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3>Languages</h3>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Go</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Java</span>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3>Frameworks &amp; APIs</h3>
-                <span class="skill-tag">Django</span>
-                <span class="skill-tag">FastAPI</span>
-                <span class="skill-tag">GraphQL</span>
-                <span class="skill-tag">REST APIs</span>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3>Infrastructure</h3>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">Kubernetes</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">Cloudflare</span>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">Redis</span>
-            </div>
-        </section>
-
-        <!-- Public Speaking Awards Section -->
-        <section class="section" id="public-speaking" data-aos="fade-up">
-            <div class="section-header">
-                <h2>Public Speaking Awards</h2>
-            </div>
-            <ul>
-                <li data-aos="fade-left" data-aos-delay="100"><b>2nd Place, National Level Debate</b>, Jamia Millia Islamia University, New Delhi (2016).</li>
-                <li data-aos="fade-left" data-aos-delay="150"><b>3rd Place, Toastmasters Zonal Impromptu Speech</b>, IIM Bangalore (2019), and Best Speaker at IBC Titans Toastmasters Club, Oracle.</li>
-                <li data-aos="fade-left" data-aos-delay="200">Multiple inter-collegiate debate and extempore wins across university and regional competitions; <b>Orator of the Year</b>, Ramdeobaba College (2015).</li>
-            </ul>
-        </section>
-
-        <!-- Education Section -->
-        <section class="section" id="education" data-aos="fade-up">
-            <div class="section-header">
-                <h2>Education</h2>
-            </div>
-            <h3>Bachelor of Engineering in Information Technology</h3>
-            <h4>Ramdeobaba College of Engineering, Nagpur</h4>
-            <p class="timeline">August 2014 - May 2018</p>
-        </section>
-    </div>
+    </main>
 
     <footer>
         <div class="container text-center">
@@ -1057,28 +990,6 @@
 
             fadeElements.forEach(element => {
                 observer.observe(element);
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const expandLink = document.getElementById('expand-experience');
-            const hiddenExperience = document.querySelector('.hidden-experience');
-            const partialExperience = document.querySelector('.partial-experience');
-
-            expandLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                hiddenExperience.classList.toggle('expanded');
-                partialExperience.classList.toggle('expanded');
-
-                if (hiddenExperience.classList.contains('expanded')) {
-                    expandLink.querySelector('span').textContent = 'Show Less';
-                    expandLink.classList.add('expanded');
-                } else {
-                    expandLink.querySelector('span').textContent = 'Show More';
-                    expandLink.classList.remove('expanded');
-                    // Scroll to the start of the experience section
-                    document.getElementById('experience').scrollIntoView({behavior: 'smooth'});
-                }
             });
         });
 
