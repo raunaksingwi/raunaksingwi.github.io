@@ -1,18 +1,4 @@
 (function () {
-  // Speaking list: fade the tail; the full list stays in the DOM and is revealed with the toggle.
-  var wrap = document.getElementById('awards-wrap');
-  var btn = document.querySelector('.show-all');
-  if (wrap && btn) {
-    wrap.classList.add('faded');
-    btn.classList.add('on');
-    btn.addEventListener('click', function () {
-      var open = wrap.classList.toggle('faded') === false;
-      btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? 'Show fewer' : 'Show all 11';
-    });
-  }
-})();
-(function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) return;
   var root = document.documentElement;
