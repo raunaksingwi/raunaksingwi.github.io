@@ -54,7 +54,7 @@ class PersonalWebsiteTests(unittest.TestCase):
     def test_contact_links(self):
         for url in ('mailto:raunaksingwi7@gmail.com', 'https://www.linkedin.com/in/raunak-singwi/',
                     'https://x.com/raunak_singwi', 'https://www.instagram.com/raunaksingwi/',
-                    'https://www.youtube.com/@raunaksingwi', 'https://meet.google.com/uqv-ikta-vda',
+                    'https://www.youtube.com/@raunaksingwi',
                     'https://github.com/raunaksingwi'):
             self.assertIn('href="' + url + '"', HTML)
 
@@ -69,6 +69,9 @@ class PersonalWebsiteTests(unittest.TestCase):
         self.assertNotIn('show-all', HTML)
         for word in ('debater', 'speaker.', 'Speaker,'.lower()):
             self.assertNotIn(word, text(HTML.split('<aside')[0]).lower() if word != 'speaker,' else '')
+
+    def test_no_meet_link(self):
+        self.assertNotIn('meet.google.com', HTML)
 
     def test_meta(self):
         for needle in ('og:image', 'twitter:card', 'rel="canonical"', 'name="description"', 'favicon.svg'):

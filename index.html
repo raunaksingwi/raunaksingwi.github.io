@@ -24,7 +24,6 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/hero-cut-1600.webp" as="image" type="image/webp" media="(min-width: 700px)">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/main.js" defer></script>
   <script type="application/ld+json">
@@ -45,23 +44,19 @@
       </div>
     </nav>
 
-    <div class="stage" aria-labelledby="name">
-      <div class="depth">
-        <picture class="layer">
-          <source type="image/webp" srcset="assets/hero-900.webp 900w, assets/hero-1600.webp 1600w" sizes="100vw">
-          <img src="assets/hero-1600.jpg" alt="Raunak Singwi smiling in a pink polo, sitting on a boat deck with the sea behind him" width="1600" height="1600" fetchpriority="high">
-        </picture>
-        <h1 class="name" id="name"><span class="n1">Raunak</span> <span class="n2">Singwi</span></h1>
-        <picture class="layer cut" aria-hidden="true">
-          <source type="image/webp" srcset="assets/hero-cut-900.webp 900w, assets/hero-cut-1600.webp 1600w" sizes="100vw">
-          <img src="assets/hero-cut-1600.webp" alt="" width="1600" height="1600">
-        </picture>
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="name" id="name"><span>Raunak</span> <span>Singwi</span></h1>
+        <p class="role">Poet, skateboarder, stand-up comic.<br><span>Also co-founder &amp; CEO of Ravi&nbsp;Inc.</span></p>
       </div>
-    </div>
-
-    <div class="hero-foot">
-      <p class="role">Poet, skateboarder, stand-up comic.<br><span>Also co-founder &amp; CEO of Ravi&nbsp;Inc.</span></p>
-      <a class="scroll" href="#off-hours"><span>Scroll</span><i aria-hidden="true"></i></a>
+      <figure class="polaroid">
+        <p class="hand note-me" aria-hidden="true">hi, that’s me <svg viewBox="0 0 80 50"><path d="M4 8c22-6 46 2 60 26M64 34l-14-3M64 34l2-14"/></svg></p>
+        <span class="tape" aria-hidden="true"></span>
+        <picture>
+          <source type="image/webp" srcset="assets/raunak-520.webp 520w, assets/raunak-1000.webp 1000w" sizes="(min-width: 821px) 440px, 78vw">
+          <img src="assets/raunak-1000.jpg" alt="Raunak Singwi smiling in a pink polo, sitting on a boat deck with the sea behind him" width="1000" height="1000" fetchpriority="high">
+        </picture>
+      </figure>
     </div>
   </header>
 
@@ -94,15 +89,17 @@
 
     <div class="page">
       <div class="content">
-        <section id="about" class="about" aria-label="About">
+        <section id="about" class="about paper" aria-label="About">
           <p class="label">About</p>
+          <span class="clip" aria-hidden="true"><svg viewBox="0 0 30 70"><path d="M10 60V14a8 8 0 0 1 16 0v40a12 12 0 0 1-24 0V20"/></svg></span>
           <p class="statement">An engineer who became a founder. I co-founded Ravi&nbsp;Inc. with my brother, Rushabh, and I’m a Founder Fellow at <span class="hl">South&nbsp;Park&nbsp;Commons</span>.</p>
           <p class="aside-note">Before that, seven years as an engineer at VMware, Salesforce and Cloaked, with <a href="https://patents.google.com/?inventor=Raunak+Ravindra+Singwi" target="_blank" rel="noopener">12&nbsp;US&nbsp;patents</a> along the way.</p>
         </section>
 
         <section id="now" class="now" aria-labelledby="now-title">
-          <p class="label">Currently building</p>
           <div class="note">
+            <span class="tape" aria-hidden="true"></span>
+            <p class="hand">currently building</p>
             <h2 id="now-title">Ravix</h2>
             <p>Coding agents, now multiplayer. Your team joins the same Claude Code or Codex thread, guides the agent, and tries the running app together.</p>
             <a class="arrow-link" href="https://ravix.sh" target="_blank" rel="noopener">ravix.sh <span aria-hidden="true">→</span></a>
@@ -110,6 +107,7 @@
         </section>
       </div>
       <aside class="rail" id="speaking" aria-labelledby="speaking-title">
+        <span class="tape" aria-hidden="true"></span>
         <p class="label">On stage</p>
         <h2 id="speaking-title">Public speaking awards</h2>
         <div class="awards-wrap">
@@ -135,15 +133,19 @@
     <div class="contact-inner">
       <p class="label">Contact</p>
       <h2 id="contact-title">Say hello.</h2>
-      <a class="email" href="mailto:raunaksingwi7@gmail.com">raunaksingwi7@gmail.com</a>
-      <ul class="socials">
+      <div class="postcard">
+        <span class="stamp" aria-hidden="true"><span>RS</span></span>
+        <p class="hand">write to me at</p>
+        <a class="email" href="mailto:raunaksingwi7@gmail.com">raunaksingwi7@gmail.com</a>
+        <p class="hand">or find me on</p>
+        <ul class="socials">
         <li><a href="https://www.linkedin.com/in/raunak-singwi/" target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://x.com/raunak_singwi" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://www.instagram.com/raunaksingwi/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://www.youtube.com/@raunaksingwi" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="https://github.com/raunaksingwi" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://meet.google.com/uqv-ikta-vda" target="_blank" rel="noopener">Google Meet</a></li>
       </ul>
+      </div>
     </div>
     <footer class="footer">
       <span>© 2026 Raunak Singwi</span>
