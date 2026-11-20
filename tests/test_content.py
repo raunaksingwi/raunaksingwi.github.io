@@ -58,6 +58,18 @@ class PersonalWebsiteTests(unittest.TestCase):
                     'https://github.com/raunaksingwi'):
             self.assertIn('href="' + url + '"', HTML)
 
+    def test_hobbies(self):
+        off = block('section', 'off-hours')
+        for phrase in ('Poetry', 'Skateboarding', 'Stand-up comedy'):
+            self.assertIn(phrase, off)
+        self.assertIn('href="https://www.instagram.com/raunaksingwi.poetry/"', HTML)
+
+    def test_v3_asks(self):
+        self.assertNotIn('<em>', HTML)
+        self.assertNotIn('show-all', HTML)
+        for word in ('debater', 'speaker.', 'Speaker,'.lower()):
+            self.assertNotIn(word, text(HTML.split('<aside')[0]).lower() if word != 'speaker,' else '')
+
     def test_meta(self):
         for needle in ('og:image', 'twitter:card', 'rel="canonical"', 'name="description"', 'favicon.svg'):
             self.assertIn(needle, HTML)
