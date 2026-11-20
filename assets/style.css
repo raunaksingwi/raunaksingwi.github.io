@@ -34,8 +34,7 @@ img{display:block;max-width:100%}
 
 /* ---------- hero ---------- */
 .hero{padding:0 var(--pad) 0}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
-.wordmark{font-family:var(--serif);font-size:24px;text-decoration:none;letter-spacing:-.01em}
+.topbar{display:flex;justify-content:flex-end;align-items:center;padding:22px 0}
 .links{display:flex;gap:30px}
 .links a{font-size:14px;text-decoration:none;color:var(--muted);position:relative;transition:color .3s}
 .links a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--sea-deep);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
@@ -179,7 +178,9 @@ img{display:block;max-width:100%}
   .off-title{max-width:none}
   .card{padding:26px 24px 28px}
   .doodle{max-width:170px}
-  .links{display:none}
+  .topbar{justify-content:flex-start;padding:18px 0 0}
+  .links{gap:20px}
+  .links a{font-size:13.5px}
   .intro{grid-template-columns:1fr;padding-top:24px;gap:64px}
   .name{font-size:clamp(64px,21vw,110px)}
   .polaroid{width:min(82%,360px);padding:12px 12px 48px;rotate:2.5deg}
