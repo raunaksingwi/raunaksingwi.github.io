@@ -26,21 +26,28 @@ class PersonalWebsiteTests(unittest.TestCase):
         self.assertNotRegex(HTML, r'<link[^>]+rel="stylesheet"[^>]+href="https?://')
 
     def test_local_assets_exist(self):
-        for ref in re.findall(r'(?:src|href|srcset)="((?:assets/)[^"#]+)"', HTML):
+        refs = re.findall(r'(?:src|href)="(assets/[^"#]+)"', HTML)
+        for srcset in re.findall(r'srcset="([^"]+)"', HTML):
+            refs += [part.split()[0] for part in srcset.split(',')]
+        for ref in refs:
             self.assertTrue((ROOT / ref).is_file(), ref)
 
-    def test_ravix_is_the_only_project(self):
-        ravix = block('section', 'ravix')
-        for phrase in ('Ravix', 'Claude Code', 'Codex', 'now multiplayer', 'Rushabh'):
-            self.assertIn(phrase, ravix)
+    def test_ravix_is_one_modest_section(self):
+        for phrase in ('Ravix', 'Claude Code', 'Codex', 'multiplayer'):
+            self.assertIn(phrase, block('section', 'now'))
+        self.assertIn('Rushabh', HTML)
+        self.assertNotIn('Request a Ravix invite', HTML)
         self.assertIn('href="https://ravix.sh"', HTML)
-        for stale in ('Ravioli', 'Jino', 'tryravioli.com', 'ravi.app', 'Project Santa Cruz', 'Data Removal'):
+        for stale in ('Ravioli', 'Jino', 'tryravioli.com', 'ravi.app'):
             self.assertNotIn(stale, HTML)
 
     def test_speaking_rail(self):
-        rail = block('aside', 'stage')
+        rail = block('aside', 'speaking')
         self.assertIn('Public speaking', rail)
-        self.assertEqual(len(re.findall(r'<li>', re.search(r'<ol class="awards">(.*?)</ol>', HTML, re.S)[1])), 11)
+        items = re.findall(r'<li><b>.*?</li>', re.search(r'<ol class="awards"[^>]*>(.*?)</ol>', HTML, re.S)[1])
+        self.assertEqual(len(items), 11)
+        self.assertIn('Jamia Millia Islamia', items[0])
+        self.assertIn('Intra-College', items[-1])
         for phrase in ('Jamia Millia Islamia', 'IIM Bangalore', 'Orator of the Year', 'Toastmasters'):
             self.assertIn(phrase, rail)
 
